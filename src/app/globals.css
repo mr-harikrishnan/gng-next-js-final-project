@@ -1,16 +1,31 @@
-
-
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
+
+@font-face {
+  font-family: "morebold";
+  src: url("../../public/fonts/Epilogue-Black.ttf") format("truetype");
+  font-weight: normal;
+}
+
 @font-face {
   font-family: "primary";
-  src: url("/fonts/Epilogue.ttf") format("woff2");
-  weight: '800',
-  
+  src: url("../../public/fonts/Epilogue-Medium.ttf") format("truetype");
+  font-weight: normal;
+}
+
+
+
+/* Add this to create the font-morebold utility class */
+@utility font-morebold {
+  font-family: morebold;
+}
+
+@utility font-regularbold {
+  font-family: regularbold;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,8 +36,5 @@
 }
 
 body {
-
   font-family: primary;
 }
-
-
