@@ -54,13 +54,13 @@ export default function Home() {
         style={{ backgroundImage: `url(${bg1.src})` }}
         className="bg-cover bg-center h-full w-full mb-50 pt-25 xl:px-44">
 
-        <div className="w-full h-full flex flex-col  lg:flex-row gap-11 ">
-
-          <AnimationBanner></AnimationBanner>
-
-          <InformationContainer></InformationContainer>
-
-
+        <div className="w-full h-full flex flex-col  lg:flex-row gap-10 ">
+          <div className="w-full  mx-auto  lg:w-[50%] relative ">
+            <AnimationBanner></AnimationBanner>
+          </div>
+          <div className="  mb-15  bg-gray lg:w-[50%] ">
+            <InformationContainer></InformationContainer>
+          </div>
         </div>
 
 

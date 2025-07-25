@@ -24,8 +24,8 @@
   font-family: morebold;
 }
 
-@utility font-regularbold {
-  font-family: regularbold;
+@utility font-primary {
+  font-family: primary;
 }
 
 @media (prefers-color-scheme: dark) {
