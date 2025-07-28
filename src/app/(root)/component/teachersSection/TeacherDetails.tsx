@@ -13,8 +13,11 @@ function TeacherDetails() {
         <TeacherCard></TeacherCard>
       </div>
 
+
+
       <div className='overflow-hidden'>
         <ClassTwinkle></ClassTwinkle>
+        <h1>Hari</h1>
       </div>
     </div>
   )
