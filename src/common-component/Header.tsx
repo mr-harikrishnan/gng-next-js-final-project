@@ -15,19 +15,19 @@ function Header() {
                 <div className="hidden lg:block">
 
                     <div className="flex gap-10 items-center xl:ml-24">
-                        <p className="text-[1.3rem] text-[#535756] font-medium cursor-pointer tracking-tight  text-nowrap">Demos</p>
-                        <p className="text-[1.3rem] text-[#535756] font-medium cursor-pointer tracking-tight  text-nowrap">About Us</p>
-                        <p className="text-[1.3rem] text-[#535756] font-medium cursor-pointer tracking-tight  text-nowrap">Courses</p>
-                        <p className="text-[1.3rem] text-[#535756] font-medium cursor-pointer tracking-tight  text-nowrap">Events</p>
-                        <p className="text-[1.3rem] text-[#535756] font-medium cursor-pointer tracking-tight  text-nowrap">All Pages</p>
+                        <p className="text-[1.3rem] text-[#535756] font-medium cursor-pointer tracking-wide text-nowrap">Demos</p>
+                        <p className="text-[1.3rem] text-[#535756] font-medium cursor-pointer tracking-wide text-nowrap">About Us</p>
+                        <p className="text-[1.3rem] text-[#535756] font-medium cursor-pointer tracking-wide text-nowrap">Courses</p>
+                        <p className="text-[1.3rem] text-[#535756] font-medium cursor-pointer tracking-wide text-nowrap">Events</p>
+                        <p className="text-[1.3rem] text-[#535756] font-medium cursor-pointer tracking-wide text-nowrap">All Pages</p>
                     </div>
 
                 </div>
 
                 <div className="flex items-center gap-4">
-                    <p className=" text-[1.3rem] text-[#535756] font-medium cursor-pointer tracking-tight  text-nowrap">Cart</p>
+                    <p className=" text-[1.3rem] text-[#535756] font-medium cursor-pointer tracking-wide text-nowrap">Cart</p>
 
-                    <button className="hidden lg:block bg-[#387975] px-8 rounded-xl py-3 text-[1.3rem] xl:mr-2 text-white font-medium cursor-pointer tracking-tight  text-nowrap hover:bg-[#E5FEFB] hover:text-[#387975] hover:border">
+                    <button className="hidden lg:block bg-[#387975] px-8 rounded-xl py-3 text-[1.3rem] xl:mr-2 text-white font-medium cursor-pointer tracking-wide text-nowrap hover:bg-[#E5FEFB] hover:text-[#387975] hover:border">
                         Log in
                     </button>
 
