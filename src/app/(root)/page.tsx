@@ -7,7 +7,14 @@ import AnimationBanner from "./component/heroSection/AnimationBanner";
 import InformationContainer from "./component/heroSection/InformationContainer";
 import TeacherHeadline from "./component/teachersSection/TeacherHeadline";
 import TeacherCard from "./component/teachersSection/TeacherDetails";
-import Header from "../../common-component/Header";
+import Header from "../../common/Header";
+import Services from "./component/servicesSection/Services";
+import OurCourses from "./component/OurCoursesSection/OurCourses";
+import VideoCourses from "./component/VideoCoursesSection/VideoCourses";
+import Testmonials from "./component/testmonials/Testmonials";
+import Plan from "./component/plan/Plan";
+import FindAndStartCourse from "./component/findAndStartCourse/FindAndStartCourse";
+import Footer from "@/common/Footer";
 
 
 export default function Home() {
@@ -15,7 +22,7 @@ export default function Home() {
     <div className="overflow-auto ">
 
       <Header></Header>
-      
+
       {/* -----section 1-------- */}
       <section
         style={{ backgroundImage: `url(${heroSectionBg.src})` }}
@@ -32,15 +39,77 @@ export default function Home() {
 
       </section>
 
+
+
       {/* -----section 2-------- */}
 
-      <section className=" w-full h-screen mb-0 mt-15 xl:px-44  ">
+      <section className=" w-full   mt-45 xl:px-44  ">
 
         <div className="w-full  overflow-hidden">
           <TeacherHeadline></TeacherHeadline>
           <TeacherCard></TeacherCard>
         </div>
 
+      </section>
+
+
+      {/* -----section 3 services-------- */}
+
+      <section className=" w-full   mt-15 xl:px-44  ">
+
+        <Services></Services>
+
+      </section>
+
+
+
+      {/* -----section 4 OurCourses-------- */}
+
+      <section className=" w-full   mt-15 xl:px-44  ">
+
+        <OurCourses></OurCourses>
+
+      </section>
+
+
+
+      {/* -----section 5 VideoCourses-------- */}
+
+      <section className=" w-full  mt-15 xl:px-44  ">
+
+        <VideoCourses></VideoCourses>
+
+      </section>
+
+      {/* -----section 6 tesmonials-------- */}
+
+      <section className=" w-full  mt-15 xl:px-44  ">
+
+        <Testmonials></Testmonials>
+
+      </section>
+
+      {/* -----section 7 plan-------- */}
+
+      <section className=" w-full   mt-15 xl:px-44  ">
+
+        <Plan></Plan>
+
+      </section>
+
+      {/* -----section 8 Find And Start Course-------- */}
+
+      <section className=" w-full mt-15 xl:px-44  ">
+
+       <FindAndStartCourse></FindAndStartCourse>
+
+      </section>
+
+      {/* -----section 8 Footer-------- */}
+
+      <section className=" w-full  mt-15 xl:px-44  ">
+
+      <Footer></Footer>
 
       </section>
 
