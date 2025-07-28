@@ -52,18 +52,16 @@ export default function Home() {
 
       <section
         style={{ backgroundImage: `url(${bg1.src})` }}
-        className="bg-cover bg-center h-full w-full mb-50 pt-25 xl:px-44">
+        className="bg-cover bg-center w-full mb-50 pt-25 xl:px-44  ">
 
-        <div className="w-full h-full flex flex-col  lg:flex-row gap-10 ">
+        <div className="w-full h-full flex flex-col  lg:flex-row gap-10 lg:gap-4.5 ">
           <div className="w-full  mx-auto  lg:w-[50%] relative ">
             <AnimationBanner></AnimationBanner>
           </div>
-          <div className="  mb-15  bg-gray lg:w-[50%] ">
+          <div className="  mb-15  bg-gray lg:w-[50%] lg:flex ">
             <InformationContainer></InformationContainer>
           </div>
         </div>
-
-
 
 
       </section>
