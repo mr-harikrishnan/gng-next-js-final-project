@@ -11,6 +11,7 @@ function ServiceCard() {
 
       <div className=' border py-10 p-2 flex flex-col -mt-12 '>
         <img src={no1Image.src} alt="" />
+
         <h1 className='font-morebold text-left'>Skilled Lecturers</h1>
         <p>Cras ornare sagittis tortor a facilisis nteger augue quam, placerat.</p>
       </div>
