@@ -65,13 +65,17 @@ export default function Home() {
 
       {/* -----section 3 services-------- */}
 
-      <section className=" w-full   mt-15 xl:px-44  relative">
-        
+      <section className=" w-full   mt-15 xl:px-38  relative xl:pt-38">
+
 
         <Services></Services>
         <img
-        className="object-cover w-full absolute z-[-1] left-[0px] top-[-75px] h-full"
-         src={servicesSecBg.src} alt="" />
+          className="object-cover w-full  absolute z-[-1] left-[0px] top-[-75px] h-[112.5rem]
+        sm:h-[72.5rem] sm:top-[-128px]
+        md:h-[70.6rem] 
+        lg:h-[54.3rem]
+        xl:top-[12px] xl:h-[56.2rem] "
+          src={servicesSecBg.src} alt="" />
 
       </section>
 
@@ -79,7 +83,7 @@ export default function Home() {
 
       {/* -----section 4 OurCourses-------- */}
 
-      <section className=" w-full   mt-15 xl:px-44  ">
+      <section className=" w-full   mt-25 xl:px-44  ">
 
         <OurCourses></OurCourses>
 
