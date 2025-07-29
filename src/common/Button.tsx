@@ -2,7 +2,13 @@ import React from 'react'
 
 function Button() {
   return (
-    <div className='flex justify-center items-center border px-4 rounded-lg w-max'>Button</div>
+    <a
+      href="/about-us"
+      className="px-6 py-3 border border-gray-500 text-black bg-white font-medium rounded-md inline-block"
+    >
+      Button
+    </a>
+
   )
 }
 
