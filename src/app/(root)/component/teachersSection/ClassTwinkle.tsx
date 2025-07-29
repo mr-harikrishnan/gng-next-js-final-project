@@ -1,5 +1,11 @@
+import Button from '@/common/Button'
 import Buton from '@/common/Button'
 import React from 'react'
+
+import stackImage from "@/assets/teachersSection/wrapper-Image.webp"
+import expImage from "@/assets/teachersSection/experience-image.png"
+
+
 
 function ClassTwinkle() {
     return (
@@ -10,10 +16,10 @@ function ClassTwinkle() {
                 <div className='sm:flex sm:items-center sm:justify-center relative'>
                     <img
                         className='sm:w-[55%] md:w-[69%] lg:w-full '
-                        src="https://cdn.prod.website-files.com/64184874f371bc785f2236eb/641ac245dfe41e211053ec72_Img%20Home.webp" alt="" />
+                        src={stackImage.src}alt="" />
                     <img
                         className='absolute bottom-[-60] left-[180px] sm:left-[275px] md:left-[313px] md:top-[165px] lg:left-[320px] lg:top-[225px] xl:top-[300px] xl:left-[405px]'
-                        src="https://cdn.prod.website-files.com/64184874f371bc785f2236eb/641af96a5a8ad469932baea7_Experiance%20Img.png" alt="" />
+                        src={expImage.src} alt="" />
                 </div>
 
                 <div className='flex justify-center items-center gap-4 flex-col max-w-120 md:max-w-full lg:max-w-120 py-12 lg:items-start lg:gap-6 '>
@@ -21,7 +27,7 @@ function ClassTwinkle() {
                     <p className='text-[20px] text-center text-white lg:text-left'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus sit nunc mauris arcu blandit. Turpis vitae lectus a ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
                     <div className='mt-5'>
-                        <Buton></Buton>
+                        <Button text={"About Us"}></Button>
                     </div>
                 </div>
             </div>
