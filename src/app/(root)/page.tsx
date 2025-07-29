@@ -15,11 +15,15 @@ import Testmonials from "./component/testmonials/Testmonials";
 import Plan from "./component/plan/Plan";
 import FindAndStartCourse from "./component/findAndStartCourse/FindAndStartCourse";
 import Footer from "@/common/Footer";
+import ClassTwinkle from "./component/teachersSection/ClassTwinkle";
+import teacherSecBg from "@/assets/teachersSection/teachersSection.bg.png"
+import servicesSecBg from "@/assets/services/servicesbg.png"
+
 
 
 export default function Home() {
   return (
-    <div className="overflow-auto ">
+    <div className="overflow-x-hidden ">
 
       <Header></Header>
 
@@ -41,13 +45,19 @@ export default function Home() {
 
 
 
-      {/* -----section 2-------- */}
+      {/* -----section 2 teachers details-------- */}
 
-      <section className=" w-full   mt-45 xl:px-44  ">
+      <section className=" w-full   mt-45 xl:px-44 relative ">
 
         <div className="w-full  overflow-hidden">
           <TeacherHeadline></TeacherHeadline>
           <TeacherCard></TeacherCard>
+          <ClassTwinkle></ClassTwinkle>
+          <img
+            className='w-full object-cover h-[145rem] sm:h-[87rem] md:h-[92.5rem]  lg:h-[56.5rem] xl:h-[57.1rem] absolute  top-[498px] left-0 z-[-1] sm:top-[380px] lg:top-[320px] xl:top-[400px] '
+            src={teacherSecBg.src}
+            alt=""
+          />
         </div>
 
       </section>
@@ -55,7 +65,8 @@ export default function Home() {
 
       {/* -----section 3 services-------- */}
 
-      <section className=" w-full   mt-15 xl:px-44  ">
+      <section className=" w-full   mt-15 xl:px-44  relative">
+        
 
         <Services></Services>
 
@@ -101,7 +112,7 @@ export default function Home() {
 
       <section className=" w-full mt-15 xl:px-44  ">
 
-       <FindAndStartCourse></FindAndStartCourse>
+        <FindAndStartCourse></FindAndStartCourse>
 
       </section>
 
@@ -109,7 +120,7 @@ export default function Home() {
 
       <section className=" w-full  mt-15 xl:px-44  ">
 
-      <Footer></Footer>
+        <Footer></Footer>
 
       </section>
 
