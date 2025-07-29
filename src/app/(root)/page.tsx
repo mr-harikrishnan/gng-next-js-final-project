@@ -47,7 +47,7 @@ export default function Home() {
 
       {/* -----section 2 teachers details-------- */}
 
-      <section className=" w-full   mt-45 xl:px-44 relative ">
+      <section className=" w-full   mt-27 xl:px-44 relative ">
 
         <div className="w-full  overflow-hidden">
           <TeacherHeadline></TeacherHeadline>
@@ -69,6 +69,9 @@ export default function Home() {
         
 
         <Services></Services>
+        <img
+        className="object-cover w-full absolute z-[-1] left-[0px] top-[-75px] h-full"
+         src={servicesSecBg.src} alt="" />
 
       </section>
 

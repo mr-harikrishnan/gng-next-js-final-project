@@ -6,10 +6,12 @@ import no4Image from "@/assets/services/number4Image.png"
 
 function ServiceCard() {
   return (
-    <div className='w-full grid grid-cols-2 gap-8 place-content-center place-items-center h-screen '>
+    <div className='w-full  grid grid-cols-1 gap-8 place-content-center place-items-center  '>
+
 
       <div className=' border py-10 p-2 flex flex-col -mt-12 '>
         <img src={no1Image.src} alt="" />
+
         <h1 className='font-morebold text-left'>Skilled Lecturers</h1>
         <p>Cras ornare sagittis tortor a facilisis nteger augue quam, placerat.</p>
       </div>
