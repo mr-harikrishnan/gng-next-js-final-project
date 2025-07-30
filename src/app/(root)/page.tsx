@@ -100,7 +100,7 @@ export default function Home() {
 
       {/* -----section 5 VideoCourses-------- */}
 
-      <section className=" w-full  mt-15 xl:px-44  ">
+      <section className=" w-full  mt-15 xl:px-40  ">
 
         <VideoCourses></VideoCourses>
 
