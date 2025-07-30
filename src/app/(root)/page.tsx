@@ -108,7 +108,7 @@ export default function Home() {
 
       {/* -----section 6 tesmonials-------- */}
 
-      <section className=" w-full  mt-15 xl:px-44  ">
+      <section className=" w-full  mt-15 xl:px-30  ">
 
         <Testmonials></Testmonials>
 
