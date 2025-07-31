@@ -1,5 +1,5 @@
 {
-  "name": "vathiyar-ai",
+  "name": "next-js-final-project",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "gsap": "^3.13.0",
     "next": "15.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

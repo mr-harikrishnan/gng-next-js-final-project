@@ -23,7 +23,7 @@ import servicesSecBg from "@/assets/services/servicesbg.png"
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden ">
+    <div className="overflow-hidden ">
 
       <Header></Header>
 
@@ -54,7 +54,7 @@ export default function Home() {
           <TeacherCard></TeacherCard>
           <ClassTwinkle></ClassTwinkle>
           <img
-            className='w-full object-cover h-[145rem] sm:h-[87rem] md:h-[92.5rem]  lg:h-[56.5rem] xl:h-[57.1rem] absolute  top-[498px] left-0 z-[-1] sm:top-[380px] lg:top-[320px] xl:top-[400px] '
+            className='w-full object-cover h-[145rem] sm:h-[87rem] md:h-[92.5rem]  lg:h-[56.5rem] xl:h-[57.1rem] absolute  top-[498px] left-0 z-[-2] sm:top-[380px] lg:top-[320px] xl:top-[400px] '
             src={teacherSecBg.src}
             alt=""
           />
@@ -70,11 +70,11 @@ export default function Home() {
 
         <Services></Services>
         <img
-          className="object-cover w-full  absolute z-[-1] left-[0px] top-[-75px] h-[112.5rem]
-        sm:h-[72.5rem] sm:top-[-128px]
+          className="object-cover w-full  absolute z-[-3] left-[0px] top-[-105px] h-[112.5rem]
+        sm:h-[62.5rem] sm:top-[-138px]
         md:h-[70.6rem] 
         lg:h-[54.3rem]
-        xl:top-[12px] xl:h-[56.2rem] "
+        xl:top-[12px] xl:h-[52.2rem] "
           src={servicesSecBg.src} alt="" />
 
       </section>
@@ -83,9 +83,16 @@ export default function Home() {
 
       {/* -----section 4 OurCourses-------- */}
 
-      <section className=" w-full   mt-25 xl:px-44  ">
+      <section className=" w-full   mt-25 xl:px-44 relative ">
 
         <OurCourses></OurCourses>
+        <img
+          className="object-cover w-full  absolute z-[-4] left-[0px] top-[-63px] h-[177.5rem]
+          sm:h-[97rem]
+          md:top-[-95px] md:h-[102.5rem]
+          lg:h-[68rem]
+          xl:top-[-175px] xl:h-[79.7rem]"
+          src={heroSectionBg.src} alt="" />
 
       </section>
 
@@ -93,7 +100,7 @@ export default function Home() {
 
       {/* -----section 5 VideoCourses-------- */}
 
-      <section className=" w-full  mt-15 xl:px-44  ">
+      <section className=" w-full  mt-15 xl:px-40  ">
 
         <VideoCourses></VideoCourses>
 
@@ -101,7 +108,7 @@ export default function Home() {
 
       {/* -----section 6 tesmonials-------- */}
 
-      <section className=" w-full  mt-15 xl:px-44  ">
+      <section className=" w-full  mt-15 xl:px-30  ">
 
         <Testmonials></Testmonials>
 
@@ -109,7 +116,7 @@ export default function Home() {
 
       {/* -----section 7 plan-------- */}
 
-      <section className=" w-full   mt-15 xl:px-44  ">
+      <section className=" w-full bg-[#387975]  mt-15 xl:px-44  ">
 
         <Plan></Plan>
 
@@ -117,7 +124,14 @@ export default function Home() {
 
       {/* -----section 8 Find And Start Course-------- */}
 
-      <section className=" w-full mt-15 xl:px-44  ">
+      <section className=" w-full  xl:px-44  relative ">
+        <div className="absolute top-[-40px] left-[0px] h-91  w-screen bg-[#387975] z-[-4] border
+        sm:h-78
+        md:h-65
+        lg:h-45
+        ">
+
+        </div>
 
         <FindAndStartCourse></FindAndStartCourse>
 
@@ -125,9 +139,16 @@ export default function Home() {
 
       {/* -----section 8 Footer-------- */}
 
-      <section className=" w-full  mt-15 xl:px-44  ">
+      <section className=" w-full  mt-15 xl:px-44  relative">
+        <div className="absolute top-[-337px] left-[0px] h-[93.5rem]   w-screen bg-gradient-to-b from-white to-[#e3f4ef] z-[-4] 
+        sm:top-[-330px] sm:h-[82rem]
+        md:top-[-330px] md:h-[69.5rem]
+        lg:top-[-330px] lg:h-[50.5rem]
+        "></div>
 
         <Footer></Footer>
+
+
 
       </section>
 
