@@ -1,9 +1,44 @@
 "use client";
+import {
+    
+    animateFromBottom,
+    animateFromLeft,
+    animateFromRight,
+    
+} from "@/utils/gsapAnimations"
+import React, { useEffect, useState } from 'react'
 
-import React, { useState } from "react";
 import FooterPersonsDetails from "./FooterPersonsDetails";
 
 function Testimonials() {
+
+    const runAnimations = () => {
+        animateFromBottom(".bottom-animated-img");
+        animateFromLeft(".left-animated-img");
+        animateFromRight(".right-animated-img");
+    };
+
+    useEffect(() => {
+        runAnimations();
+        const handleResize = () => {
+            // Clear previous animations and re-run (optional if you want to reset)
+            runAnimations();
+        };
+
+        // Debounce resize
+        let resizeTimeout: NodeJS.Timeout;
+        const debouncedResize = () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(handleResize, 200);
+        };
+
+        window.addEventListener("resize", debouncedResize);
+        // Cleanup on unmount
+        return () => {
+            window.removeEventListener("resize", debouncedResize);
+        };
+    }, []);
+
     const testmonialsData = [
         {
             img: "https://cdn.prod.website-files.com/64184874f371bc785f2236eb/641addc10c890d2d9149eac7_Testimonial%202.webp",
@@ -23,7 +58,7 @@ function Testimonials() {
             name: "Courtney Henry",
             role: "Designer",
         },
-        
+
     ];
 
     const [data, setData] = useState(1);
@@ -39,8 +74,8 @@ function Testimonials() {
 
                 {/* Header Section */}
                 <div className="flex flex-col justify-center items-center gap-4 mt-17">
-                    <p className="text-[20px] md:text-xl text-[#387975] ">Testimonials</p>
-                    <h1 className="font-morebold text-[32px] md:text-3xl lg:text-4xl max-w-md text-center leading-9">
+                    <p className="bottom-animated-img text-[20px] md:text-xl text-[#387975] ">Testimonials</p>
+                    <h1 className="bottom-animated-img font-morebold text-[32px] md:text-3xl lg:text-4xl max-w-md text-center leading-9">
                         See What Our Students Say&apos;s
                     </h1>
                 </div>
@@ -53,11 +88,11 @@ function Testimonials() {
                             if (0 < data) {
                                 dataChange(data - 1);
                             }
-                            else{
-                                dataChange(testmonialsData.length-1)
+                            else {
+                                dataChange(testmonialsData.length - 1)
                             }
                         }}
-                        className="min-w-12.5 min-h-12.5 hidden  sm:flex items-center  text-white justify-center border bg-[#387975] border-gray-300 rounded-lg text-2xl  transition-colors">
+                        className="left-animated-img min-w-12.5 min-h-12.5 hidden  sm:flex items-center  text-white justify-center border bg-[#387975] border-gray-300 rounded-lg text-2xl  transition-colors">
 
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +108,7 @@ function Testimonials() {
                         </svg>
                     </button>
 
-                    <div className="text-center flex items-center overflow-y-auto  px-10 font-morebold text-[34px] md:text-2xl lg:text-3xl text-[#387975] max-w-4xl  leading-9">
+                    <div className="bottom-animated-img text-center flex items-center overflow-y-auto  px-10 font-morebold text-[34px] md:text-2xl lg:text-3xl text-[#387975] max-w-4xl  leading-9">
                         {testmonialsData[data].desc}
                     </div>
 
@@ -82,11 +117,11 @@ function Testimonials() {
                             if (testmonialsData.length - 1 > data) {
                                 dataChange(data + 1);
                             }
-                            else{
+                            else {
                                 dataChange(0)
                             }
                         }}
-                        className="min-w-12.5 min-h-12.5 hidden  sm:flex items-center  text-white justify-center border bg-[#387975] border-gray-300 rounded-lg text-2xl  transition-colors">
+                        className="right-animated-img min-w-12.5 min-h-12.5 hidden  sm:flex items-center  text-white justify-center border bg-[#387975] border-gray-300 rounded-lg text-2xl  transition-colors">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -108,11 +143,11 @@ function Testimonials() {
                                 if (0 < data) {
                                     dataChange(data - 1);
                                 }
-                                else{
-                                dataChange(testmonialsData.length-1)
-                            }
+                                else {
+                                    dataChange(testmonialsData.length - 1)
+                                }
                             }}
-                            className="min-w-12.5 min-h-12.5 flex items-center px- text-white justify-center border bg-[#387975] border-gray-300 rounded-lg text-2xl  transition-colors">
+                            className="left-animated-img min-w-12.5 min-h-12.5 flex items-center px- text-white justify-center border bg-[#387975] border-gray-300 rounded-lg text-2xl  transition-colors">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -129,7 +164,7 @@ function Testimonials() {
                             </svg>
                         </button>
 
-                        <div className="w-full  flex justify-center ">
+                        <div className="bottom-animated-img w-full  flex justify-center ">
                             <div className="bg-[#387975] h-[2px] w-full mx-3 mt-9"></div>
                         </div>
 
@@ -138,11 +173,11 @@ function Testimonials() {
                                 if (testmonialsData.length - 1 > data) {
                                     dataChange(data + 1);
                                 }
-                                else{
+                                else {
                                     dataChange(0)
                                 }
                             }}
-                            className="min-w-12.5 min-h-12.5 flex items-center px- text-white justify-center border bg-[#387975] border-gray-300 rounded-lg text-2xl  transition-colors">
+                            className="right-animated-img min-w-12.5 min-h-12.5 flex items-center px- text-white justify-center border bg-[#387975] border-gray-300 rounded-lg text-2xl  transition-colors">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -165,9 +200,9 @@ function Testimonials() {
                 <div className="w-full flex md:hidden flex-col justify-center mt-1 ">
                     {/* User 1 */}
                     <div className="w-full  flex justify-center ">
-                        <div className="bg-[#387975] h-[2px] w-full mx-40 hidden sm:block "></div>
+                        <div className="bottom-animated-img bg-[#387975] h-[2px] w-full mx-40 hidden sm:block "></div>
                     </div>
-                    <div className="flex justify-center w-full ">
+                    <div className="bottom-animated-img flex justify-center w-full ">
                         <div className="flex items-center gap-4">
                             <div className="">
                                 <img
@@ -187,7 +222,7 @@ function Testimonials() {
                 </div>
 
                 {/* Testimonial Users mt to ...*/}
-                <div className="hidden md:grid grid-cols-3 justify-center mt-0 ">
+                <div className="bottom-animated-img hidden md:grid grid-cols-3 justify-center mt-0 ">
                     <FooterPersonsDetails
                         dataArry={testmonialsData}
                         useStateData={data == 0 ? testmonialsData.length - 1 : data - 1}

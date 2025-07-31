@@ -1,10 +1,43 @@
-import React from 'react'
+"use client"
+import {
+  animateZoomIn,
+} from "@/utils/gsapAnimations"
+import React, { useEffect } from 'react'
+
 import no1Image from "@/assets/services/number1Image.png"
 import no2Image from "@/assets/services/number2Image.png"
 import no3Image from "@/assets/services/number3Image.png"
 import no4Image from "@/assets/services/number4Image.png"
 
 function ServiceCard() {
+
+  const runAnimations = () => {
+
+
+    animateZoomIn(".zoom-scale");
+
+  };
+
+  useEffect(() => {
+    runAnimations();
+    const handleResize = () => {
+      // Clear previous animations and re-run (optional if you want to reset)
+      runAnimations();
+    };
+
+    // Debounce resize
+    let resizeTimeout: NodeJS.Timeout;
+    const debouncedResize = () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(handleResize, 200);
+    };
+
+    window.addEventListener("resize", debouncedResize);
+    // Cleanup on unmount
+    return () => {
+      window.removeEventListener("resize", debouncedResize);
+    };
+  }, []);
 
   const serviceCardData = [
     {
@@ -39,7 +72,7 @@ function ServiceCard() {
       {
         serviceCardData.map((data, index) =>
 
-          <div key={index} className={` border border-white ${index == 0 ? "bg-white " : "bg-[#387975] text-white"}  rounded-lg p-2 flex flex-col items-left px-4
+          <div key={index} className={`zoom-scale border border-white ${index == 0 ? "bg-white " : "bg-[#387975] text-white"}  rounded-lg p-2 flex flex-col items-left px-4
       sm:${index % 2 == 0 ? "-mt-8" : "mt-8"} sm:pb-10 `}>
             <img
               className='w-14 mt-6'

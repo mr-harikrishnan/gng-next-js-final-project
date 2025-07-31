@@ -7,8 +7,8 @@ import {
   animateZoomIn,
   animateZoomLoop
 } from "@/utils/gsapAnimations"
-
 import React, { useEffect } from 'react'
+
 import anHello from "@/assets/homeSection/animation_hello.png";
 import anPe1 from "@/assets/homeSection/animation_person_image_1.webp"
 import purpleCicle from "@/assets/homeSection/purple_circle.png"
@@ -31,6 +31,7 @@ import orangeCicle from "@/assets/homeSection/orange_circle.png"
 
 
 function AnimationBanner() {
+  
   const runAnimations = () => {
     animateFromTop(".top-animated-img");
     animateFromBottom(".bottom-animated-img");
