@@ -1,3 +1,4 @@
+"use client"
 import logo from "@/assets/vathiyar-ai-logo.png";
 import heroSectionBg from "@/assets/homeSection/1_white_and_green_bg.jpg";
 import teachersSectionBg from "@/assets/teachersSection/teachersSection.bg.png"
@@ -18,14 +19,26 @@ import Footer from "@/common/Footer";
 import ClassTwinkle from "./component/teachersSection/ClassTwinkle";
 import teacherSecBg from "@/assets/teachersSection/teachersSection.bg.png"
 import servicesSecBg from "@/assets/services/servicesbg.png"
+import LanguageSchoolSidebar from "@/common/SideBar";
+import { useState } from "react";
 
 
 
 export default function Home() {
+
+  const [sideBar, setSideBar] = useState(false)
+
+  const toggleSideBar: () => void = () => {
+    setSideBar(!sideBar);
+  };
+
   return (
     <div className="overflow-hidden ">
 
-      <Header></Header>
+      <LanguageSchoolSidebar setSideBar={setSideBar} sideBar={sideBar} toggleSideBar={toggleSideBar} />
+
+
+      <Header toggleSideBar={toggleSideBar}></Header>
 
       {/* -----section 1-------- */}
       <section
