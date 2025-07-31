@@ -138,11 +138,11 @@ export default function Home() {
       {/* -----section 8 Find And Start Course-------- */}
 
       <section className=" w-full  xl:px-44  relative ">
-        <div className="absolute top-[-40px] left-[0px] h-91  w-screen bg-[#387975] z-[-4] border
+        <div className="absolute top-[-40px] left-[0px] h-91  w-screen bg-[#387975] z-[-1] 
         sm:h-78
         md:h-65
         lg:h-45
-        ">
+        xl:h-50">
 
         </div>
 
@@ -157,6 +157,7 @@ export default function Home() {
         sm:top-[-330px] sm:h-[82rem]
         md:top-[-330px] md:h-[69.5rem]
         lg:top-[-330px] lg:h-[50.5rem]
+        
         "></div>
 
         <Footer></Footer>
