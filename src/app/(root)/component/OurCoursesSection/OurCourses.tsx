@@ -50,14 +50,14 @@ function OurCourses() {
             </div>
 
 
-            <div className='w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:mt-15 px-2  place-items-center gap-10 sm:gap-5 mt-12 xl:px-0'>
-                {
-                    ourCourseData.map((data, index) => (
-                        <CourseCard data={data}></CourseCard>
-                    ))
-                }
-
+            <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-5 mt-12 px-2 xl:px-0">
+                {ourCourseData.map((data, index) => (
+                    <div key={index} className="flex justify-center">
+                        <CourseCard data={data} />
+                    </div>
+                ))}
             </div>
+
         </div>
     )
 }

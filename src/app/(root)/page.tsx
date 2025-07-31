@@ -70,8 +70,8 @@ export default function Home() {
 
         <Services></Services>
         <img
-          className="object-cover w-full  absolute z-[-3] left-[0px] top-[-75px] h-[112.5rem]
-        sm:h-[72.5rem] sm:top-[-128px]
+          className="object-cover w-full  absolute z-[-3] left-[0px] top-[-105px] h-[112.5rem]
+        sm:h-[62.5rem] sm:top-[-138px]
         md:h-[70.6rem] 
         lg:h-[54.3rem]
         xl:top-[12px] xl:h-[52.2rem] "
