@@ -1,8 +1,41 @@
-import React from 'react'
+"use client"
+import {
+
+  animateFromBottom,
+
+} from "@/utils/gsapAnimations"
+import React, { useEffect } from 'react'
 
 function InformationContainer() {
+
+    const runAnimations = () => {
+   animateFromBottom(".bottom-animated-img")
+     
+      };
+    
+      useEffect(() => {
+        runAnimations();
+        const handleResize = () => {
+          // Clear previous animations and re-run (optional if you want to reset)
+          runAnimations();
+        };
+    
+        // Debounce resize
+        let resizeTimeout: NodeJS.Timeout;
+        const debouncedResize = () => {
+          clearTimeout(resizeTimeout);
+          resizeTimeout = setTimeout(handleResize, 200);
+        };
+    
+        window.addEventListener("resize", debouncedResize);
+        // Cleanup on unmount
+        return () => {
+          window.removeEventListener("resize", debouncedResize);
+        };
+      }, []);
+    
     return (
-        <div className='px-3.5 sm:px-19 md:px-[89px] w-full md:mt-5 md:mb-5.5 lg:px-0 lg:mt-34 lg:mr-4 xl:mr-0  '>
+        <div className='bottom-animated-img px-3.5 sm:px-19 md:px-[89px] w-full md:mt-5 md:mb-5.5 lg:px-0 lg:mt-34 lg:mr-4 xl:mr-0  '>
 
             <div className=' w-full pt-[10px] sm:pt-[11px]  lg:mt-7.5'>
                 <div>

@@ -1,9 +1,43 @@
-import React from 'react'
+"use client"
+import {
+
+  animateFromBottom,
+
+} from "@/utils/gsapAnimations"
+import React, { useEffect } from 'react'
+
+
 import personIcon from "@/assets/teachersSection/person_icon.png"
 
 function TeacherHeadline() {
+
+       const runAnimations = () => {
+       animateFromBottom(".bottom-animated-img")
+         
+          };
+        
+          useEffect(() => {
+            runAnimations();
+            const handleResize = () => {
+              // Clear previous animations and re-run (optional if you want to reset)
+              runAnimations();
+            };
+        
+            // Debounce resize
+            let resizeTimeout: NodeJS.Timeout;
+            const debouncedResize = () => {
+              clearTimeout(resizeTimeout);
+              resizeTimeout = setTimeout(handleResize, 200);
+            };
+        
+            window.addEventListener("resize", debouncedResize);
+            // Cleanup on unmount
+            return () => {
+              window.removeEventListener("resize", debouncedResize);
+            };
+          }, []);
     return (
-        <div className='w-full px-3.5 md:px-18.5 lg:px-50 xl:px-68.5'>
+        <div className='bottom-animated-img w-full px-3.5 md:px-18.5 lg:px-50 xl:px-68.5'>
             <div className='w-full  md:mt-5 '>
                 <div className='w-full flex justify-center'>
                     <img src={personIcon.src} alt="" />
