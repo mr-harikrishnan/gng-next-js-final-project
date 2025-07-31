@@ -39,7 +39,7 @@ function ServiceCard() {
       {
         serviceCardData.map((data, index) =>
 
-          <div className={` border border-white ${index == 0 ? "bg-white " : "bg-[#387975] text-white"}  rounded-lg p-2 flex flex-col items-left px-4
+          <div key={index} className={` border border-white ${index == 0 ? "bg-white " : "bg-[#387975] text-white"}  rounded-lg p-2 flex flex-col items-left px-4
       sm:${index % 2 == 0 ? "-mt-8" : "mt-8"} sm:pb-10 `}>
             <img
               className='w-14 mt-6'
