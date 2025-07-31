@@ -1,7 +1,39 @@
-import React from 'react'
+"use client"
+import {
 
+  animateFromBottom,
+
+} from "@/utils/gsapAnimations"
+import React, { useEffect } from 'react'
 
 function TeacherCard() {
+
+  const runAnimations = () => {
+     animateFromBottom(".bottom-animated-img")
+       
+        };
+      
+        useEffect(() => {
+          runAnimations();
+          const handleResize = () => {
+            // Clear previous animations and re-run (optional if you want to reset)
+            runAnimations();
+          };
+      
+          // Debounce resize
+          let resizeTimeout: NodeJS.Timeout;
+          const debouncedResize = () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(handleResize, 200);
+          };
+      
+          window.addEventListener("resize", debouncedResize);
+          // Cleanup on unmount
+          return () => {
+            window.removeEventListener("resize", debouncedResize);
+          };
+        }, []);
+
   return (
     <div className='w-full '>
       <div className=' flex flex-col bg-[#E2EDEC] border rounded-lg items-center  px-2 mx-4 sm:mx-0  py-2'>
@@ -19,7 +51,7 @@ function TeacherCard() {
         </div>
         <h1 className='font-morebold text-[22.1px] mt-4.5'>Esther Howard</h1>
         <p className='text-[#535756] text-[16px] text-center mt-4 '>Lorem ipsum dolor sit amet consectetur elit sed do.</p>
-        <div className='w-full flex justify-between text-[16px] text-[#535756]  text-center mt-7 mb-4.5 px-3'>
+        <div className='bottom-animated-img w-full flex justify-between text-[16px] text-[#535756]  text-center mt-7 mb-4.5 px-3'>
           <p>Price</p>
           <p className='font-extrabold text-[#367470]'>$25.00</p>
         </div>

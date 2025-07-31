@@ -1,10 +1,43 @@
-import React from 'react'
+"use client"
+import {
+
+  animateZoomIn,
+} from "@/utils/gsapAnimations"
+import React, { useEffect } from 'react'
+
 import PlanCardSmall from './PlanCardSmall'
 import PlanCardBig from './PlanCardBig'
 
 
 
 function PlanFullCard() {
+
+      
+      const runAnimations = () => {
+    
+        animateZoomIn(".zoom-scale");
+      };
+    
+      useEffect(() => {
+        runAnimations();
+        const handleResize = () => {
+          // Clear previous animations and re-run (optional if you want to reset)
+          runAnimations();
+        };
+    
+        // Debounce resize
+        let resizeTimeout: NodeJS.Timeout;
+        const debouncedResize = () => {
+          clearTimeout(resizeTimeout);
+          resizeTimeout = setTimeout(handleResize, 200);
+        };
+    
+        window.addEventListener("resize", debouncedResize);
+        // Cleanup on unmount
+        return () => {
+          window.removeEventListener("resize", debouncedResize);
+        };
+      }, []);
 
     const planData = [
         {
@@ -37,15 +70,15 @@ function PlanFullCard() {
           lg:grid-cols-3
 
           md:mt-8    md:gap-8  md:p-8">
-            <div className='col-span-'>
-                <PlanCardSmall data={planData[0]}></PlanCardSmall>
+            <div className='zoom-scale col-span-1 '>
+                <PlanCardSmall  data={planData[0]}></PlanCardSmall>
             </div>
 
-            <div className='col-span-1'>
+            <div className='zoom-scale col-span-1'>
                 <PlanCardBig data={planData[1]}></PlanCardBig>
             </div>
 
-            <div className='col-span-1 sm:col-span-2 lg:col-span-1'>
+            <div className='zoom-scale col-span-1 sm:col-span-2 lg:col-span-1'>
                 <PlanCardSmall data={planData[0]}></PlanCardSmall>
             </div>
         </div>

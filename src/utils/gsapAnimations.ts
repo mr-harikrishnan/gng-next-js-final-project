@@ -8,7 +8,7 @@ export const animateFromTop = (target: string) => {
     {
       y: 0,
       opacity: 1,
-      duration: 1,
+      duration: 0.6,
       stagger: 0.2,
       ease: "power2.out",
     }
@@ -22,8 +22,8 @@ export const animateFromBottom = (target: string) => {
     {
       y: 0,
       opacity: 1,
-      duration: 1,
-      stagger: 0.2,
+      duration: 0.6,
+      stagger: 0.01,
       ease: "power2.out",
     }
   );
@@ -36,8 +36,8 @@ export const animateFromLeft = (target: string) => {
     {
       x: 0,
       opacity: 1,
-      duration: 1,
-      stagger: 0.2,
+      duration: 0.6,
+      stagger: 0.01,
       ease: "power2.out",
     }
   );
@@ -50,8 +50,8 @@ export const animateFromRight = (target: string) => {
     {
       x: 0,
       opacity: 1,
-      duration: 1,
-      stagger: 0.2,
+      duration: 0.6,
+      stagger: 0.01,
       ease: "power2.out",
     }
   );
@@ -65,8 +65,8 @@ export const animateZoomIn = (target: string) => {
     {
       scale: 1,
       opacity: 1,
-      duration: 1,
-      stagger: 0.2,
+      duration: 0.6,
+      stagger: 0.01,
       ease: "power2.out",
     }
   );
