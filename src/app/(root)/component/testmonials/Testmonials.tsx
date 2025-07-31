@@ -41,7 +41,7 @@ function Testimonials() {
                 <div className="flex flex-col justify-center items-center gap-4 mt-17">
                     <p className="text-[20px] md:text-xl text-[#387975] ">Testimonials</p>
                     <h1 className="font-morebold text-[32px] md:text-3xl lg:text-4xl max-w-md text-center leading-9">
-                        See What Our Students Say's
+                        See What Our Students Say&apos;s
                     </h1>
                 </div>
 

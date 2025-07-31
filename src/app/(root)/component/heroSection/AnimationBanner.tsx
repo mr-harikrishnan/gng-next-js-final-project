@@ -21,7 +21,7 @@ import orangeCicle from "@/assets/homeSection/orange_circle.png"
 
 
 
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import gsap from 'gsap';
 
 function AnimationBanner() {

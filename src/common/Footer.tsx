@@ -27,7 +27,7 @@ function Footer() {
 
                     {/* Main Heading */}
                     <h1 className='font-morebold text-center lg:text-left text-[32px] md:text-4xl lg:text-[42px] text-black leading-tight max-w-md'>
-                        Let's Find Best Course For You
+                        Let&apos;s Find Best Course For You
                     </h1>
 
                     {/* Contact Button */}
