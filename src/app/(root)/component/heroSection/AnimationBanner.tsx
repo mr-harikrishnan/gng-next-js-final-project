@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import anHello from "@/assets/homeSection/animation_hello.png";
 import anPe1 from "@/assets/homeSection/animation_person_image_1.webp"
@@ -17,16 +19,77 @@ import anbhonj from "@/assets/homeSection/animation_bonjour.png"
 import anPe4 from "@/assets/homeSection/animation_person_image_4.webp"
 import orangeCicle from "@/assets/homeSection/orange_circle.png"
 
+
+
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+
 function AnimationBanner() {
+
+  useEffect(() => {
+    gsap.fromTo(
+      '.top-animated-img',              // 👈 select all elements with this class
+      { y: -100, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.2,               // 👈 Animate one after another
+        ease: 'power2.out',
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      '.bottom-animated-img',              // 👈 select all elements with this class
+      { y: 100, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.2,               // 👈 Animate one after another
+        ease: 'power2.out',
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      '.left-animated-img',              // 👈 select all elements with this class
+      { x: -100, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.2,               // 👈 Animate one after another
+        ease: 'power2.out',
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      '.right-animated-img',              // 👈 select all elements with this class
+      { x: 100, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.2,               // 👈 Animate one after another
+        ease: 'power2.out',
+      }
+    );
+  }, []);
   return (
 
 
     <div className="grid grid-cols-2 place-items-center lg:pr-4 lg:mb-20 xl:mb-33">
 
       <div className=" ml-12 relative ">
-        <img src={anHello.src} alt="" className="absolute bottom-47 left-25 w-17 z-10 sm:-top-10 sm:left-60.5 sm:w-24 md:left-[315px] md:top-[-35px] lg:left-45 lg:-top-12 xl:left-49" />
-        <img src={anPe1.src} alt="" className="mr-12 mb-20 w-33 sm:w-61 sm:ml-7 sm:-mt-5 md:-mt-5 md:ml-24 md:min-w-67 lg:-mt-8 lg:-ml-3.5 lg:min-w-50 xl:min-w-65 xl:-mt-8 xl:mr-14.5" />
-        <img src={blueCircle.src} alt="" className="absolute left-[-80px] top-[77px] w-[76px] sm:left-[-42px] sm:top-[110px] md:left-[0.5px] md:top-[125px] lg:left-[-100px] lg:top-[110px] xl:left-[-127px] xl:top-[122px]" />
+        <img  src={anHello.src} alt="" className="top-animated-img absolute bottom-47 left-25 w-17 z-10 sm:-top-10 sm:left-60.5 sm:w-24 md:left-[315px] md:top-[-35px] lg:left-45 lg:-top-12 xl:left-49" />
+        <img  src={anPe1.src} alt="" className="left-animated-img mr-12 mb-20 w-33 sm:w-61 sm:ml-7 sm:-mt-5 md:-mt-5 md:ml-24 md:min-w-67 lg:-mt-8 lg:-ml-3.5 lg:min-w-50 xl:min-w-65 xl:-mt-8 xl:mr-14.5" />
+        <img  src={blueCircle.src} alt="" className="bottom-animated-img absolute left-[-80px] top-[77px] w-[76px] sm:left-[-42px] sm:top-[110px] md:left-[0.5px] md:top-[125px] lg:left-[-100px] lg:top-[110px] xl:left-[-127px] xl:top-[122px]" />
 
       </div>
       <div className="xl:mr-1 mt-9 relative">

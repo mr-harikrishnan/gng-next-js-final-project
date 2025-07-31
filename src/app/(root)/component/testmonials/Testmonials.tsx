@@ -23,6 +23,7 @@ function Testimonials() {
             name: "Courtney Henry",
             role: "Designer",
         },
+        
     ];
 
     const [data, setData] = useState(1);
@@ -52,6 +53,9 @@ function Testimonials() {
                             if (0 < data) {
                                 dataChange(data - 1);
                             }
+                            else{
+                                dataChange(testmonialsData.length-1)
+                            }
                         }}
                         className="min-w-12.5 min-h-12.5 hidden  sm:flex items-center  text-white justify-center border bg-[#387975] border-gray-300 rounded-lg text-2xl  transition-colors">
 
@@ -78,6 +82,9 @@ function Testimonials() {
                             if (testmonialsData.length - 1 > data) {
                                 dataChange(data + 1);
                             }
+                            else{
+                                dataChange(0)
+                            }
                         }}
                         className="min-w-12.5 min-h-12.5 hidden  sm:flex items-center  text-white justify-center border bg-[#387975] border-gray-300 rounded-lg text-2xl  transition-colors">
                         <svg
@@ -101,6 +108,9 @@ function Testimonials() {
                                 if (0 < data) {
                                     dataChange(data - 1);
                                 }
+                                else{
+                                dataChange(testmonialsData.length-1)
+                            }
                             }}
                             className="min-w-12.5 min-h-12.5 flex items-center px- text-white justify-center border bg-[#387975] border-gray-300 rounded-lg text-2xl  transition-colors">
                             <svg
@@ -127,6 +137,9 @@ function Testimonials() {
                             onClick={() => {
                                 if (testmonialsData.length - 1 > data) {
                                     dataChange(data + 1);
+                                }
+                                else{
+                                    dataChange(0)
                                 }
                             }}
                             className="min-w-12.5 min-h-12.5 flex items-center px- text-white justify-center border bg-[#387975] border-gray-300 rounded-lg text-2xl  transition-colors">
