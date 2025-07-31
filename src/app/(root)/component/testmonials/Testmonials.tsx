@@ -13,13 +13,13 @@ function Testimonials() {
         },
         {
             img: "https://cdn.prod.website-files.com/64184874f371bc785f2236eb/641addc146b44664c7dd4da6_Testimonial%203.webp",
-            desc: "The classes here are really amazing. Every lesson is filled with new things to learn, and the teachers always make sure we understand everything. I feel more confident speaking English now, thanks to their support and patience.",
+            desc: "The teachers are simply wonderful. I am very happy that I went to study English here. Lessons and practice at the highest level. Thanks for the lessons!",
             name: "Darlene Robertson",
             role: "Realtor",
         },
         {
             img: "https://cdn.prod.website-files.com/64184874f371bc785f2236eb/641addc1ff0f86116af72b41_Testimonial%201.webp",
-            desc: "Studying English here was one of the best decisions I've made. The environment is friendly, and the teachers are always encouraging. They help you not just learn grammar, but also use English in real life. I enjoyed every moment of the course!",
+            desc: "The teachers are simply wonderful. I am very happy that I went to study English here. Lessons and practice at the highest level. Thanks for the lessons!",
             name: "Courtney Henry",
             role: "Designer",
         },
@@ -73,7 +73,7 @@ function Testimonials() {
                         </svg>
                     </button>
 
-                    <div className="text-center flex items-center overflow-y-auto min-h-130 max-h-130 lg:max-h-60 lg:min-h-60 px-10 font-morebold text-[34px] md:text-2xl lg:text-3xl text-[#387975] max-w-4xl  leading-9">
+                    <div className="text-center flex items-center overflow-y-auto  px-10 font-morebold text-[34px] md:text-2xl lg:text-3xl text-[#387975] max-w-4xl  leading-9">
                         {testmonialsData[data].desc}
                     </div>
 

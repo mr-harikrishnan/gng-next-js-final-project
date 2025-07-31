@@ -15,7 +15,7 @@ function FindAndStartCourse() {
                     <input type="text" placeholder='Full Name*' className='border border-gray-500 rounded-md py-3 px-12' />
                     <input type="text" placeholder='Email*' className='border border-gray-500 rounded-md py-3 px-12' />
                     <input type="text" placeholder='English*' className='border border-gray-500 rounded-md py-3 px-12' />
-                    <Button></Button>
+                    <Button text={"Button"} ></Button>
                 </div>
             </div>
         </div>
