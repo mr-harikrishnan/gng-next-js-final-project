@@ -116,7 +116,7 @@ export default function Home() {
 
       {/* -----section 7 plan-------- */}
 
-      <section className=" w-full   mt-15 xl:px-44  ">
+      <section className=" w-full bg-[#387975]  mt-15 xl:px-44  ">
 
         <Plan></Plan>
 
