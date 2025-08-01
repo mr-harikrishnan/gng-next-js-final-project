@@ -9,30 +9,30 @@ type SideBarToggleProps = {
 
 function Header({ toggleSideBar }: SideBarToggleProps) {
     return (
-        <header className="absolute w-full px-3.5 py-4 lg:px-3.5  lg:mt-2.5  xl:px-44 ">
+        <header className="absolute flex justify-center  w-full  px-3.5 py-4 lg:px-3.5  lg:mt-2.5  ">
 
-            <div className=" pt-1 flex justify-between   items-center">
+            <div className="  flex w-full justify-between  max-w-292.5  items-center ">
 
                 <div>
                    <Link href={"/"}> <img src={logo.src} className='cursor-pointer ' alt="" /> </Link>
                 </div>
 
-                <div className="hidden lg:block">
+                <div className="hidden lg:flex justify-center     ">
 
-                    <div className="flex gap-10 items-center xl:ml-24">
-                        <p className="text-[1.3rem] text-[#535756] font-medium cursor-pointer tracking-wide text-nowrap">Demos</p>
-                        <p className="text-[1.3rem] text-[#535756] font-medium cursor-pointer tracking-wide text-nowrap">About Us</p>
-                        <p className="text-[1.3rem] text-[#535756] font-medium cursor-pointer tracking-wide text-nowrap">Courses</p>
-                        <p className="text-[1.3rem] text-[#535756] font-medium cursor-pointer tracking-wide text-nowrap">Events</p>
-                        <p className="text-[1.3rem] text-[#535756] font-medium cursor-pointer tracking-wide text-nowrap">All Pages</p>
+                    <div className="flex  items-center justify-center gap-10">
+                        <p className="text-[20px] text-center text-[#535756] font-medium cursor-pointer tracking-wide text-nowrap">Demos</p>
+                        <p className="text-[20px] text-center text-[#535756] font-medium cursor-pointer tracking-wide text-nowrap">About Us</p>
+                        <p className="text-[20px] text-center text-[#535756] font-medium cursor-pointer tracking-wide text-nowrap">Courses</p>
+                        <p className="text-[20px] text-center text-[#535756] font-medium cursor-pointer tracking-wide text-nowrap">Events</p>
+                        <p className="text-[20px] text-center text-[#535756] font-medium cursor-pointer tracking-wide text-nowrap">All Pages</p>
                     </div>
 
                 </div>
 
-                <div className="flex items-center gap-4">
-                    <p className=" text-[1.3rem] text-[#535756] font-medium cursor-pointer tracking-wide text-nowrap">Cart</p>
+                <div className="flex items-center gap-8">
+                    <p className=" text-[20px] text-center text-[#535756] font-medium cursor-pointer tracking-wide text-nowrap">Cart</p>
 
-                    <button className="hidden lg:block bg-[#387975] px-8 rounded-xl py-3 text-[1.3rem] xl:mr-2 text-white font-medium cursor-pointer tracking-wide text-nowrap hover:bg-[#E5FEFB] hover:text-[#387975] hover:border">
+                    <button className="hidden lg:block bg-[#387975] px-8 rounded-xl py-3 text-[1.3rem]  text-white font-medium cursor-pointer tracking-wide text-nowrap hover:bg-[#E5FEFB] hover:text-[#387975] hover:border">
                         Log in
                     </button>
 

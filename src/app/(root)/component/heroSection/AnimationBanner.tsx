@@ -65,7 +65,7 @@ function AnimationBanner() {
   return (
 
 
-    <div className="grid grid-cols-2 place-items-center lg:pr-4 lg:mb-20 xl:mb-33">
+    <div className="grid grid-cols-2 place-items-center lg:pr-4 lg:mb-20 xl:mb-33 max-w-100 sm:max-w-161 md:max-w-189">
 
       <div className=" ml-12 relative ">
         <img src={anHello.src} alt="" className="bottom-animated-img absolute bottom-47 left-25 w-17 z-10 sm:-top-10 sm:left-60.5 sm:w-24 md:left-[315px] md:top-[-35px] lg:left-45 lg:-top-12 xl:left-49" />
