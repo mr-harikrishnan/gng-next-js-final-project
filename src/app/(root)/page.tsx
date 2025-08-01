@@ -19,7 +19,7 @@ import Footer from "@/common/Footer";
 import ClassTwinkle from "./component/teachersSection/ClassTwinkle";
 import teacherSecBg from "@/assets/teachersSection/teachersSection.bg.png"
 import servicesSecBg from "@/assets/services/servicesbg.png"
-import LanguageSchoolSidebar from "@/common/SideBar";
+import Sidebar from "@/common/SideBar";
 import { useState } from "react";
 
 
@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <div className="overflow-hidden ">
 
-      <LanguageSchoolSidebar setSideBar={setSideBar} sideBar={sideBar} toggleSideBar={toggleSideBar} />
+      <Sidebar setSideBar={setSideBar} sideBar={sideBar} toggleSideBar={toggleSideBar} />
       <div
         onClick={toggleSideBar}
         className={`lg:hidden ${sideBar == true ? "block" : "hidden"} fixed inset-0 bg-[#00000060] bg-opacity-10 -sm z-[40]`}></div>
