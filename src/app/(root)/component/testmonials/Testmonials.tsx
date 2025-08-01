@@ -92,7 +92,7 @@ function Testimonials() {
                                 dataChange(testmonialsData.length - 1)
                             }
                         }}
-                        className="left-animated-img min-w-12.5 min-h-12.5 hidden  sm:flex items-center  text-white justify-center border bg-[#387975] border-gray-300 rounded-lg text-2xl  transition-colors">
+                        className="left-animated-img cursor-pointer min-w-12.5 min-h-12.5 hidden  sm:flex items-center  text-white justify-center border bg-[#387975] border-gray-300 rounded-lg text-2xl  transition-colors">
 
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +121,7 @@ function Testimonials() {
                                 dataChange(0)
                             }
                         }}
-                        className="right-animated-img min-w-12.5 min-h-12.5 hidden  sm:flex items-center  text-white justify-center border bg-[#387975] border-gray-300 rounded-lg text-2xl  transition-colors">
+                        className="right-animated-img cursor-pointer min-w-12.5 min-h-12.5 hidden  sm:flex items-center  text-white justify-center border bg-[#387975] border-gray-300 rounded-lg text-2xl  transition-colors">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -147,7 +147,7 @@ function Testimonials() {
                                     dataChange(testmonialsData.length - 1)
                                 }
                             }}
-                            className="left-animated-img min-w-12.5 min-h-12.5 flex items-center px- text-white justify-center border bg-[#387975] border-gray-300 rounded-lg text-2xl  transition-colors">
+                            className="left-animated-img cursor-pointer min-w-12.5 min-h-12.5 flex items-center px- text-white justify-center border bg-[#387975] border-gray-300 rounded-lg text-2xl  transition-colors">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -177,7 +177,7 @@ function Testimonials() {
                                     dataChange(0)
                                 }
                             }}
-                            className="right-animated-img min-w-12.5 min-h-12.5 flex items-center px- text-white justify-center border bg-[#387975] border-gray-300 rounded-lg text-2xl  transition-colors">
+                            className="right-animated-img cursor-pointer min-w-12.5 min-h-12.5 flex items-center px- text-white justify-center border bg-[#387975] border-gray-300 rounded-lg text-2xl  transition-colors">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
