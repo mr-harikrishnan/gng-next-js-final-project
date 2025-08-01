@@ -31,10 +31,10 @@ export default function Home() {
       {/* ----- section 1 --------*/}
       <section
         style={{ backgroundImage: `url(${heroSectionBg.src})` }}
-        className="bg-cover bg-center w-full  pt-25 xl:px-44  ">
+        className="bg-cover bg-center w-full  pt-25   flex justify-center">
 
-        <div className="w-full h-full flex flex-col  lg:flex-row gap-10 lg:gap-4.5 ">
-          <div className="w-full  mx-auto  lg:w-[50%] relative ">
+        <div className="w-full h-full flex flex-col  lg:flex-row gap-10 lg:gap-4.5 max-w-292.5 ">
+          <div className="w-full flex justify-center  mx-auto  lg:w-[50%] relative ">
             <AnimationBanner></AnimationBanner>
           </div>
           <div className="  mb-15  bg-gray lg:w-[50%] lg:flex ">
