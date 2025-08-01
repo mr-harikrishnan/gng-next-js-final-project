@@ -26,7 +26,7 @@ function LanguageSchoolSidebar({
   ]
 
   return (
-    <div className={`${sideBar == false ?"hidden":""} fixed w-72 h-full bg-[#E2EDEC] shadow-lg flex flex-col z-50 lg:hidden`}>
+    <div className={`${sideBar == false ?"hidden":""} fixed w-72 h-full bg-[#E2EDEC] shadow-lg flex flex-col z-48 lg:hidden`}>
       {/* Header */}
       <div className="p-6 border-b border-gray-200 relative">
         <div className="flex flex-col">
