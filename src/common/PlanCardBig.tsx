@@ -25,7 +25,7 @@ function PlanCardBig({ data }: DataTypeProps) {
             <p className="text-[16px] mt-7.5   text-center text-[#565A59]  px-4">{data.desc}</p>
 
             <div className='px-6 mt-10 mb-7.5'>
-                <Button text={"Get Started"} ></Button>
+                <Button text={"Get Started"} bgColour={"#387975"} textColour={"white"}></Button>
             </div>
         </div>
     )

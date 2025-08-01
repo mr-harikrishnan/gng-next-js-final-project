@@ -81,7 +81,7 @@ function OurCourses() {
             <div className='w-full mt-1 flex flex-col items-center sm:px-20 lg:flex-row lg:px-3.5 lg:mt-2 lg:gap-12 xl:px-0 xl:mt-1 xl:gap-58'>
                 <p className='bottom-animated-img text-center  text-[20px] lg:text-left'>Pellentesque fringilla, massa sit amet feugiat mollis, leo turpis elementum justo, vel consequat ex urna ut massa maecenas justo sapien.</p>
                 <div className='bottom-animated-img mt-8 sm:mt-8 md:mt-12 lg:mt-0'>
-                    <Button text={"Veiw More"}></Button>
+                    <Button text={"Veiw More"} bgColour={""} textColour={"#387975"} ></Button>
                 </div>
             </div>
 

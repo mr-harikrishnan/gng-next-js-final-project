@@ -32,7 +32,7 @@ function Footer() {
 
                     {/* Contact Button */}
                     <div className='mt-6'>
-                        <Button text={"Contact Us"}></Button>
+                        <Button text={"Contact Us"} bgColour={"#387975"} textColour={"white"}></Button>
                     </div>
                 </div>
 
@@ -67,7 +67,7 @@ function Footer() {
                                 sm:mt-0'
                             />
                             <div className="w-full sm:w-max flex justify-center items-center">
-                                <Button text={"Subscribe"}></Button>
+                                <Button text={"Subscribe"} bgColour={"#387975"} textColour={"white"}></Button>
 
                             </div>
                         </div>
