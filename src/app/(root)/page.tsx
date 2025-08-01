@@ -38,7 +38,7 @@ export default function Home() {
       <LanguageSchoolSidebar setSideBar={setSideBar} sideBar={sideBar} toggleSideBar={toggleSideBar} />
       <div
         onClick={toggleSideBar}
-        className={`lg:hidden ${sideBar == true ? "block" : "hidden"}  fixed inset-0 bg-[#959f9b00] bg-opacity-50 backdrop-blur-sm z-[40]`}></div>
+        className={`lg:hidden ${sideBar == true ? "block" : "hidden"} fixed inset-0 bg-[#00000060] bg-opacity-10 -sm z-[40]`}></div>
 
 
 
