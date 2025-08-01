@@ -47,7 +47,7 @@ function FindAndStartCourse() {
                     </select>
 
                     <div className=" flex justify-center items-center mb-9 sm:mb-6.5 md:mb-0 md:justify-start">
-                        <Button text={"Button"} />
+                        <Button text={"Button"} bgColour={"#387975"} textColour={"white"} />
                     </div>
                 </div>
             </div>
