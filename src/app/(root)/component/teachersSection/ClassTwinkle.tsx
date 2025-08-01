@@ -43,7 +43,7 @@ function ClassTwinkle() {
       }, []);
 
     return (
-        <div className="mt-26 sm:mt-15 md:mt-20 px-2 w-full mb-15 lg:mt-5 ">
+        <div className="mt-15 sm:mt-15 md:mt-20 px-2 w-full mb-15 lg:mt-5 ">
 
             <div className='w-full sm:items-center flex flex-col  lg:flex-row  gap-9 xl:gap-24'>
 

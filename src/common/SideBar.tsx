@@ -10,13 +10,13 @@ type SideBarToggleProps = {
 };
 
 // Combine both
-type LanguageSchoolSidebarProps = SideBarProps & SideBarToggleProps;
+type SidebarProps = SideBarProps & SideBarToggleProps;
 
-function LanguageSchoolSidebar({
+function Sidebar({
   setSideBar,
   sideBar,
   toggleSideBar,
-}: LanguageSchoolSidebarProps) {
+}: SidebarProps) {
   const menuItems = [
     { id: 'demos', label: 'Demos', hasDropdown: true },
     { id: 'about', label: 'About Us', hasDropdown: true },
@@ -72,4 +72,4 @@ function LanguageSchoolSidebar({
   )
 }
 
-export default LanguageSchoolSidebar
+export default Sidebar
