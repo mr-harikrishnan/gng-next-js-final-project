@@ -61,7 +61,7 @@ function ClassTwinkle() {
                     <p className='text-[20px] text-center text-white lg:text-left'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus sit nunc mauris arcu blandit. Turpis vitae lectus a ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
                     <div className='mt-5'>
-                        <Button text={"About Us"}></Button>
+                        <Button text={"About Us"} bgColour={"white"} textColour={"black"}></Button>
                     </div>
                 </div>
             </div>

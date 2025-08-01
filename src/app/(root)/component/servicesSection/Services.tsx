@@ -51,7 +51,7 @@ function Services() {
                 <h1 className="font-morebold -mt-1 text-center text-[32px] lg:text-left lg:text-[42px]">What We Provide To You</h1>
                 <p className="font-primary text-center text-[20px] lg:text-left">Pellentesque fringilla, massa sit amet feugiat mollis, leo turpis elementum justo, vel consequat ex urna ut massa maecenas justo sapien.</p>
                 <div className='mt-7'>
-                    <Buton text={"Veiw More"}></Buton>
+                    <Buton text={"Veiw More"} bgColour={"white"} textColour={"black"}></Buton>
                 </div>
 
             </div>
