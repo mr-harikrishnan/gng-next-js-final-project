@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import logo from "@/assets/vathiyar-ai-logo.png";
+import Link from 'next/link';
 
 type SideBarToggleProps = {
     toggleSideBar: () => void;
@@ -13,9 +14,7 @@ function Header({ toggleSideBar }: SideBarToggleProps) {
             <div className=" pt-1 flex justify-between   items-center">
 
                 <div>
-                    <img
-
-                        src={logo.src} alt="" />
+                   <Link href={"/"}> <img src={logo.src} className='cursor-pointer ' alt="" /> </Link>
                 </div>
 
                 <div className="hidden lg:block">
