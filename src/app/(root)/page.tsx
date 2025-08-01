@@ -4,7 +4,6 @@ import AnimationBanner from "./component/heroSection/AnimationBanner";
 import InformationContainer from "./component/heroSection/InformationContainer";
 import TeacherHeadline from "./component/teachersSection/TeacherHeadline";
 import TeacherCard from "./component/teachersSection/TeacherDetails";
-import Header from "../../common/Header";
 import Services from "./component/servicesSection/Services";
 import OurCourses from "./component/OurCoursesSection/OurCourses";
 import VideoCourses from "./component/VideoCoursesSection/VideoCourses";
@@ -22,6 +21,7 @@ import NavBar from "@/common/NavBar";
 
 export default function Home() {
 
+ 
 
   return (
     <div className="overflow-hidden ">
@@ -48,14 +48,14 @@ export default function Home() {
 
       {/* -----section 2 teachers details-------- */}
 
-      <section className=" w-full   mt-27 xl:px-44 relative ">
+      <section className=" w-full flex justify-center   relative ">
 
-        <div className="w-full  overflow-hidden">
+        <div className="w-full max-w-292.5 mt-7 overflow-hidden">
           <TeacherHeadline></TeacherHeadline>
           <TeacherCard></TeacherCard>
           <ClassTwinkle></ClassTwinkle>
           <img
-            className='w-full object-cover h-[145rem] sm:h-[87rem] md:h-[92.5rem]  lg:h-[56.5rem] xl:h-[57.1rem] absolute  top-[498px] left-0 z-[-2] sm:top-[380px] lg:top-[320px] xl:top-[400px] '
+            className='w-full absolute object-cover top-[617px] left-0 z-[-2] h-[145rem] sm:h-[87rem] sm:top-[445px] md:h-[92.5rem] md:top-[599px]  lg:h-[56.5rem] lg:top-[385px] xl:h-[57.1rem] xl:top-[465px]        '
             src={teacherSecBg.src}
             alt=""
           />

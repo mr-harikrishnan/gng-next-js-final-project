@@ -36,15 +36,15 @@ function TeacherCard() {
 
   return (
     <div className='w-full '>
-      <div className=' flex flex-col bg-[#E2EDEC] border rounded-lg items-center  px-2 mx-4 sm:mx-0  py-2'>
+      <div className=' flex flex-col shadow-sm bg-[#E2EDEC]  rounded-lg items-center  px-2 mx-4 sm:mx-0  py-2'>
         <div className='w-full flex   items-center justify-center relative'>
           <img
-            className='mt-6.5'
+            className='mt-[23px] border-3 border-white hover:border-[#387975] shadow-lg rounded-full'
             src="https://cdn.prod.website-files.com/64184874f371bc66ec2236f9/641ab5d6cec88a5e3da6c523_Teacher%203.png"
             alt=""
           />
           <img
-            className='absolute left-[88.7px] top-[19.4px] sm:left-[33px] md:left-[72.7px] lg:top-[10px] lg:left-[27px] '
+            className='absolute left-[72.7px] top-[19.4px] sm:left-[33px] md:left-[76.7px] md:top-[] lg:top-[10px] lg:left-[27px] xl:left-[40px] '
             src="https://cdn.prod.website-files.com/64184874f371bc66ec2236f9/641ab5f3f54c56a48c3c82b1_Flag%203.png"
             alt=""
           />
