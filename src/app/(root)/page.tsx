@@ -1,14 +1,10 @@
 "use client"
 import logo from "@/assets/vathiyar-ai-logo.png";
 import heroSectionBg from "@/assets/homeSection/1_white_and_green_bg.jpg";
-import teachersSectionBg from "@/assets/teachersSection/teachersSection.bg.png"
-
-
 import AnimationBanner from "./component/heroSection/AnimationBanner";
 import InformationContainer from "./component/heroSection/InformationContainer";
 import TeacherHeadline from "./component/teachersSection/TeacherHeadline";
 import TeacherCard from "./component/teachersSection/TeacherDetails";
-import Header from "../../common/Header";
 import Services from "./component/servicesSection/Services";
 import OurCourses from "./component/OurCoursesSection/OurCourses";
 import VideoCourses from "./component/VideoCoursesSection/VideoCourses";
@@ -19,31 +15,18 @@ import Footer from "@/common/Footer";
 import ClassTwinkle from "./component/teachersSection/ClassTwinkle";
 import teacherSecBg from "@/assets/teachersSection/teachersSection.bg.png"
 import servicesSecBg from "@/assets/services/servicesbg.png"
-import Sidebar from "@/common/SideBar";
-import { useState } from "react";
+import NavBar from "@/common/Navbar";
 
 
 
 export default function Home() {
 
-  const [sideBar, setSideBar] = useState(false)
 
-  const toggleSideBar: () => void = () => {
-    setSideBar(!sideBar);
-  };
 
   return (
     <div className="overflow-hidden ">
 
-      <Sidebar setSideBar={setSideBar} sideBar={sideBar} toggleSideBar={toggleSideBar} />
-      <div
-        onClick={toggleSideBar}
-        className={`lg:hidden ${sideBar == true ? "block" : "hidden"} fixed inset-0 bg-[#00000060] bg-opacity-10 -sm z-[40]`}></div>
-
-
-
-
-      <Header toggleSideBar={toggleSideBar}></Header>
+      <NavBar></NavBar>
 
       {/* -----section 1-------- */}
       <section
