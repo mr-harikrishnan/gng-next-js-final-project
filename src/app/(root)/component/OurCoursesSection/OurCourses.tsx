@@ -79,7 +79,7 @@ function OurCourses() {
         <div className='w-full '>
             <h1 className="bottom-animated-img font-morebold text-[32px] text-center md:text-[36px] lg:text-left lg:pl-3.5 lg:text-[42px] xl:pl-0">Popular Learning Tracks</h1>
             <div className='w-full mt-1 flex flex-col items-center sm:px-20 lg:flex-row lg:px-3.5 lg:mt-0 lg:gap-12 xl:px-0 xl:mt-1 xl:gap-58'>
-                <p className='bottom-animated-img text-center text-gray-600  text-[20px] lg:text-left'>This section can showcase popular roadmap titles you've created.</p>
+                <p className='bottom-animated-img text-center text-gray-600  text-[20px] lg:text-left'>This section can showcase popular roadmap titles you&apos;ve created.</p>
                 <div className='bottom-animated-img mt-8 sm:mt-8 md:mt-12 lg:mt-0'>
                     <Button text={"Veiw More"} bgColour={""} textColour={"#387975"} ></Button>
                 </div>

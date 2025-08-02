@@ -13,7 +13,6 @@ type SideBarToggleProps = {
 type SidebarProps = SideBarProps & SideBarToggleProps;
 
 function Sidebar({
-  setSideBar,
   sideBar,
   toggleSideBar,
 }: SidebarProps) {
