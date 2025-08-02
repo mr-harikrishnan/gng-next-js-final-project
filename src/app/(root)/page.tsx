@@ -86,16 +86,20 @@ export default function Home() {
 
       {/* -----section 4 OurCourses-------- */}
 
-      <section className=" w-full   mt-25 xl:px-44 relative ">
+      <section className=" w-full  flex justify-center  relative ">
 
-        <OurCourses></OurCourses>
-        <img
-          className="object-cover w-full  absolute z-[-4] left-[0px] top-[-63px] h-[177.5rem]
-          sm:h-[97rem]
-          md:top-[-95px] md:h-[102.5rem]
-          lg:h-[68rem]
-          xl:top-[-175px] xl:h-[79.7rem]"
-          src={heroSectionBg.src} alt="" />
+        <div className="max-w-292.5 pt-38 sm:pt-31 md:pt-46.5 lg:pt-41 xl:pt-65.5">
+          <OurCourses></OurCourses>
+          <img
+            className="object-cover w-full  absolute z-[-4] left-[0px] top-[-63px] h-[187rem]
+          sm:h-[105rem]
+          md:top-[-95px] md:h-[114.5rem]
+          lg:h-[78.6rem]
+          xl:top-[-175px] xl:h-[97.5rem]"
+            src={heroSectionBg.src} alt="" />
+        </div>
+
+
 
       </section>
 
