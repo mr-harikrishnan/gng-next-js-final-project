@@ -21,12 +21,12 @@ import NavBar from "@/common/NavBar";
 
 export default function Home() {
 
- 
+
 
   return (
     <div className="overflow-hidden ">
 
-      <NavBar/>
+      <NavBar />
 
       {/* ----- section 1 --------*/}
       <section
@@ -66,17 +66,19 @@ export default function Home() {
 
       {/* -----section 3 services-------- */}
 
-      <section className=" w-full   mt-15 xl:px-38  relative xl:pt-38">
+      <section className=" w-full   flex justify-center  relative ">
 
-
-        <Services></Services>
-        <img
-          className="object-cover w-full  absolute z-[-3] left-[0px] top-[-105px] h-[112.5rem]
-        sm:h-[62.5rem] sm:top-[-138px]
+        <div className="max-w-292.5 pt-5 ">
+          <Services></Services>
+          <img
+            className="object-cover w-full h-[112rem] absolute z-[-3] left-[0px] top-[-105px]   
+        sm:h-[72.8rem] sm:top-[-138px]
         md:h-[70.6rem] 
-        lg:h-[54.3rem]
-        xl:top-[12px] xl:h-[52.2rem] "
-          src={servicesSecBg.src} alt="" />
+        lg:h-[57.1rem]
+        xl:top-[12px] xl:h-[57.5rem] "
+            src={servicesSecBg.src} alt="" />
+        </div>
+
 
       </section>
 
