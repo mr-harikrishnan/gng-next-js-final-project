@@ -6,7 +6,16 @@ import {
 } from "@/utils/gsapAnimations"
 import React, { useEffect } from 'react'
 
-function TeacherCard() {
+type TypeProps = {
+  title: string;
+  desc: string;
+};
+
+type DataProps = {
+  data: TypeProps;
+};
+
+function TeacherCard({ data }: DataProps) {
 
   const runAnimations = () => {
      animateFromBottom(".bottom-animated-img")
@@ -49,8 +58,8 @@ function TeacherCard() {
             alt=""
           />
         </div>
-        <h1 className='font-morebold text-[22.1px] mt-4.5'>Esther Howard</h1>
-        <p className='text-[#535756] text-[16px] text-center mt-4 '>Lorem ipsum dolor sit amet consectetur elit sed do.</p>
+        <h1 className='font-morebold text-[22.1px] mt-4.5'>{data.title}</h1>
+        <p className='text-[#535756] text-[16px] text-center mt-4 '>{data.desc}</p>
         <div className='bottom-animated-img w-full flex justify-between text-[16px] text-[#535756]  text-center mt-7 mb-4.5 px-3'>
           <p>Price</p>
           <p className='font-extrabold text-[#367470]'>$25.00</p>
