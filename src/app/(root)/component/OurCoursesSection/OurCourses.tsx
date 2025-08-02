@@ -42,53 +42,53 @@ function OurCourses() {
 
     const ourCourseData = [
         {
-            level: "Beginner",
-            lang: "French Language",
-            desc: "Cras ornare sagittis tortor a facilisis nteger augue quam, placerat."
+            label: "AI Basics",
+            topic: "AI for Beginners",
+            desc: "Master the basics of AI and ML through interactive videos + quizzes.",
+            img:""
         },
         {
-            level: "Upper-Intermediate",
-            lang: "English Language",
-            desc: "Cras ornare sagittis tortor a facilisis nteger augue quam, placerat."
+            label: "FullStack Pro",
+            topic: "Full Stack Developer",
+            desc: "From HTML to deployment — track your way through live coding tasks.",
+            img:""
         },
         {
-            level: "Beginner",
-            lang: "German Language",
-            desc: "Cras ornare sagittis tortor a facilisis nteger augue quam, placerat."
+            label: "Cyber Safe",
+            topic: "Cybersecurity Essentials",
+            desc: "Learn how to stay safe and understand how systems are protected..",
+            img:""
         },
         {
-            level: "Beginner",
-            lang: "Children Courses",
-            desc: "Cras ornare sagittis tortor a facilisis nteger augue quam, placerat."
+            label: "***",
+            topic: "***",
+            desc: "***"
         },
         {
-            level: "Intermediate",
-            lang: "Intermediate",
-            desc: "Cras ornare sagittis tortor a facilisis nteger augue quam, placerat."
+            label: "***",
+            topic: "***",
+            desc: "***"
         },
         {
-            level: "Advanced",
-            lang: "Advanced Course",
-            desc: "Cras ornare sagittis tortor a facilisis nteger augue quam, placerat."
+            label: "***",
+            topic: "***",
+            desc: "***"
         },
     ]
     return (
-        <div className='w-full mt-59.5
-        sm:mt-29
-         md:mt-38
-         xl:mt-48 '>
-            <h1 className="bottom-animated-img font-morebold text-[32px] text-center md:text-[36px] lg:text-left lg:pl-3.5 lg:text-[42px] xl:pl-0">Our Courses</h1>
-            <div className='w-full mt-1 flex flex-col items-center sm:px-20 lg:flex-row lg:px-3.5 lg:mt-2 lg:gap-12 xl:px-0 xl:mt-1 xl:gap-58'>
-                <p className='bottom-animated-img text-center  text-[20px] lg:text-left'>Pellentesque fringilla, massa sit amet feugiat mollis, leo turpis elementum justo, vel consequat ex urna ut massa maecenas justo sapien.</p>
+        <div className='w-full '>
+            <h1 className="bottom-animated-img font-morebold text-[32px] text-center md:text-[36px] lg:text-left lg:pl-3.5 lg:text-[42px] xl:pl-0">Popular Learning Tracks</h1>
+            <div className='w-full mt-1 flex flex-col items-center sm:px-20 lg:flex-row lg:px-3.5 lg:mt-0 lg:gap-12 xl:px-0 xl:mt-1 xl:gap-58'>
+                <p className='bottom-animated-img text-center text-gray-600  text-[20px] lg:text-left'>This section can showcase popular roadmap titles you've created.</p>
                 <div className='bottom-animated-img mt-8 sm:mt-8 md:mt-12 lg:mt-0'>
                     <Button text={"Veiw More"} bgColour={""} textColour={"#387975"} ></Button>
                 </div>
             </div>
 
 
-            <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-5 mt-12 px-2 xl:px-0">
+            <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-5 mt-12 lg:mt-16 lg:gap-4 xl:gap-8 xl:mt-15 px-2 xl:px-0">
                 {ourCourseData.map((data, index) => (
-                    <div key={index} className="flex justify-center">
+                    <div key={index} className="flex justify-center lg:mb-3.5 xl:mb-0">
                         <CourseCard data={data} />
                     </div>
                 ))}
