@@ -11,6 +11,8 @@ import no4Image from "@/assets/services/number4Image.png"
 
 function ServiceCard() {
 
+
+
   const runAnimations = () => {
 
 
@@ -42,23 +44,23 @@ function ServiceCard() {
   const serviceCardData = [
     {
       img: no1Image,
-      headline: "Skilled Lecturers",
-      desc: "Cras ornare sagittis tortor a facilisis nteger augue quam, placerat."
+      headline: "AI-Powered Feedback",
+      desc: "Real-time micro-assessments that reinforce learning."
     },
     {
       img: no2Image,
-      headline: "Book Library",
-      desc: "Cras ornare sagittis tortor a facilisis nteger augue quam, placerat."
+      headline: "Content-Aware Nudges",
+      desc: "Smart reminders based on what you're studying right now."
     },
     {
       img: no3Image,
-      headline: "Online Classes",
-      desc: "Cras ornare sagittis tortor a facilisis nteger augue quam, placerat."
+      headline: "Interactive Dashboards",
+      desc: "Get insights on time spent, strengths, gaps, and consistency."
     },
     {
       img: no4Image,
-      headline: "Skilled Lecturers",
-      desc: "Cras ornare sagittis tortor a facilisis nteger augue quam, placerat."
+      headline: "WhatsApp Integration",
+      desc: "Receive timely nudges and task lists right on your phone."
     }
   ]
 
@@ -66,19 +68,22 @@ function ServiceCard() {
 
 
   return (
-    <div className='w-full  grid grid-cols-1 gap-8 place-content-center place-items-center 
-    sm:grid-cols-2 sm:gap-6 '>
+    <div className='w-full   grid grid-cols-1 place-items-center  place-content-center 
+    sm:grid-cols-2 sm:gap-6 lg:gap-5 xl:gap-8  sm:px-4 gap-7.5 xl:px-0 px-4  '>
 
       {
         serviceCardData.map((data, index) =>
 
-          <div key={index} className={`zoom-scale border border-white ${index == 0 ? "bg-white " : "bg-[#387975] text-white"}  rounded-lg p-2 flex flex-col items-left px-4
-      sm:${index % 2 == 0 ? "-mt-8" : "mt-8"} sm:pb-10 `}>
-            <img
-              className='w-14 mt-6'
-              src={data.img.src} alt="" />
-            <h1 className='font-morebold  mt-4 text-[22px]'>{data.headline}</h1>
-            <p className='text-center  mt-4 mb-9 sm:mb-0 sm:text-left'>{data.desc}</p>
+          <div key={index} className={`zoom-scale flex  flex-col items-center  h-67 md:h-61 md:items-start lg:h-73 pt-7 lg:pt-7.5 xl:h-66   w-full px-5  border border-white ${index == 0 ? "bg-white " : "bg-[#387975] text-white"}  rounded-lg 
+             ${index == 1 ? "sm:mt-15" : ""} ${index == 2 ? "sm:-mt-12 lg:-mt-15" : ""}
+             `}>
+            <div className="w-full flex justify-center sm:justify-start">
+              <img
+                className='w-14 '
+                src={data.img.src} alt="" />
+            </div>
+            <h1 className='font-morebold mt-4  text-[22px] '>{data.headline}</h1>
+            <p className={`text-center   ${index == 0 ? "text-gray-500" : "text-white"} mt-4 mb-9 sm:mb-0 sm:text-left`}>{data.desc}</p>
           </div>
         )
       }
