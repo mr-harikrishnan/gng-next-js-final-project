@@ -55,7 +55,7 @@ export default function Home() {
           <TeacherCard></TeacherCard>
           <ClassTwinkle></ClassTwinkle>
           <img
-            className='w-full absolute object-cover top-[617px] left-0 z-[-2] h-[150rem] sm:h-[93.5rem] sm:top-[445px] md:h-[90.3rem] md:top-[599px]  lg:h-[62rem] lg:top-[385px] xl:h-[57.1rem] xl:top-[465px]        '
+            className='w-full absolute object-cover top-[617px] left-0 z-[-2] h-[153rem] sm:h-[93.5rem] sm:top-[445px] md:h-[93.6rem] md:top-[599px]  lg:h-[61.5rem] lg:top-[385px] xl:h-[60.5rem] xl:top-[465px]        '
             src={teacherSecBg.src}
             alt=""
           />

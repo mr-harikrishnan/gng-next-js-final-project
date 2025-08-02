@@ -48,12 +48,12 @@ function ClassTwinkle() {
     
     {/* Left Image Section */}
     <div className="relative sm:flex sm:items-center sm:justify-center w-full">
-      <img src={stackImage.src} alt="Stack" className="w-full mt-16" />
+      <img src={stackImage.src} alt="Stack" className="w-full  mt-16 sm:max-w-80 md:max-w-98 lg:min-w-127.5 xl:min-w-142 xl:-ml-2" />
       
       <img
         src={expImage.src}
         alt="Experience"
-        className="zoom-scale absolute bottom-[-50px] left-[163px] sm:left-[275px] md:left-[313px] md:top-[165px] lg:left-[343.5px] lg:top-[246px] xl:left-[405px] xl:top-[300px]"
+        className="zoom-scale absolute bottom-[-50px] left-[163px] sm:left-[298px]  md:left-[398px] md:top-[230px] lg:left-[343.5px] lg:top-[310px] xl:left-[395px] xl:top-[360px]"
       />
     </div>
 
@@ -66,7 +66,7 @@ function ClassTwinkle() {
         Vaathiyar makes learning stick. Instead of watching and forgetting, students get mini-quizzes, reminders, and personalized feedback — exactly when they need it. For colleges, Vaathiyar brings visibility into student progress, training impact, and performance metrics across batches.
       </p>
 
-      <div className="mt-[23px]">
+      <div className="mt-[29px]">
         <Button text={"About Us"} bgColour={"white"} textColour={"black"} />
       </div>
     </div>
