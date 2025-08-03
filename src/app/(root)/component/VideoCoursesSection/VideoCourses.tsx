@@ -1,7 +1,7 @@
 "use client"
 import {
     animateFromBottom,
-    
+
 } from "@/utils/gsapAnimations"
 import React, { useEffect } from 'react'
 
@@ -10,22 +10,29 @@ import VideoCourseCard from '@/common/VideoCourseCard'
 
 function VideoCourses() {
 
+    const videoCourse=[
+        {
+            topic:"Free Learning Roadmaps\n ",
+            desc:"Open tracks students can self-enroll into and get guidance.\n",
+            img:"https://cdn.prod.website-files.com/64184874f371bc785f2236eb/642bed7d7775c4be53c506de_Free%20Online%20Courses%20(1)%20(1)-p-800.webp"
+        },
+        {
+            topic:"Premium Institution Roadmaps",
+            desc:"Structured journeys designed for college batches, with batch-level analytics and certificates.",
+            img:"https://cdn.prod.website-files.com/64184874f371bc785f2236eb/642bed504b8284a112ed2f23_Premium%20Online%20Courses%20(1)%20(1).webp"
+        }
+    ]
+
     const runAnimations = () => {
-
         animateFromBottom(".bottom-animated-img");
-
-       
-
     };
 
     useEffect(() => {
         runAnimations();
         const handleResize = () => {
-            // Clear previous animations and re-run (optional if you want to reset)
             runAnimations();
         };
 
-        // Debounce resize
         let resizeTimeout: NodeJS.Timeout;
         const debouncedResize = () => {
             clearTimeout(resizeTimeout);
@@ -33,23 +40,25 @@ function VideoCourses() {
         };
 
         window.addEventListener("resize", debouncedResize);
-        // Cleanup on unmount
         return () => {
             window.removeEventListener("resize", debouncedResize);
         };
     }, []);
 
     return (
-        <div className='bottom-animated-img w-full mt-31 xl:mt-66'>
+        <div className='bottom-animated-img w-full '>
 
             <div className="w-full flex flex-col items-center justify-center gap-4 px-4 sm:px-17 text-center  xl:px-80  ">
-                <h1 className="font-morebold text-[32px] md:text-[36px] lg:text-[42px] text-center ">Online Video Courses</h1>
-                <p className='text-[20px]'>We provide the best service that comes with the best results.</p>
+                <h1 className="font-morebold text-[32px] md:text-[36px] lg:text-[42px] text-center ">Self-Paced or Structured? Your Call.</h1>
+                <p className='text-[20px]'>Choose what fits you best — learn at your own speed or follow guided paths with milestones.</p>
             </div>
 
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-8 mt-11 px-4'>
-                <VideoCourseCard></VideoCourseCard>
-                <VideoCourseCard></VideoCourseCard>
+                {videoCourse.map((data,index)=>(
+                <VideoCourseCard key={index} data={data}></VideoCourseCard>
+
+                ))}
+                
             </div>
 
         </div>

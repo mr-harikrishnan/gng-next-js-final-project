@@ -107,17 +107,22 @@ export default function Home() {
 
       {/* -----section 5 VideoCourses-------- */}
 
-      <section className=" w-full  mt-15 xl:px-40  ">
+      <section className=" w-full flex justify-center   relative">
 
-        <VideoCourses></VideoCourses>
-
+        <div className="max-w-292.5 pt-31 sm:pt-31 md:pt-40.5 lg:pt-37.5 xl:pt-66">
+          <VideoCourses></VideoCourses>
+        </div>
       </section>
 
       {/* -----section 6 tesmonials-------- */}
 
-      <section className=" w-full  mt-15 xl:px-30  ">
+      <section className=" w-full  flex justify-center  ">
 
+        <div className="max-w-292.5 xl:pt-54.5    ">
         <Testmonials></Testmonials>
+
+        </div>
+
 
       </section>
 
