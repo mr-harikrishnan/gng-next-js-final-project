@@ -91,11 +91,11 @@ export default function Home() {
         <div className="max-w-292.5 pt-38 sm:pt-31 md:pt-46.5 lg:pt-41 xl:pt-65.5">
           <OurCourses></OurCourses>
           <img
-            className="object-cover w-full  absolute z-[-4] left-[0px] top-[-63px] h-[187rem]
-          sm:h-[105rem]
-          md:top-[-95px] md:h-[114.5rem]
-          lg:h-[78.6rem]
-          xl:top-[-175px] xl:h-[97.5rem]"
+            className="object-cover w-full  absolute z-[-4] left-[0px] top-[-63px] h-[197rem]
+          sm:h-[137.5rem]
+          md:top-[-95px] md:h-[149.4rem]
+          lg:h-[91.8rem]
+          xl:top-[-175px] xl:h-[107.9rem]"
             src={heroSectionBg.src} alt="" />
         </div>
 
