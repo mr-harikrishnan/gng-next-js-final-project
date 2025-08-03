@@ -42,23 +42,16 @@ function Testimonials() {
     const testmonialsData = [
         {
             img: "https://cdn.prod.website-files.com/64184874f371bc785f2236eb/641addc10c890d2d9149eac7_Testimonial%202.webp",
-            desc: "The teachers are simply wonderful. I am very happy that I went to study English here. Lessons and practice at the highest level. Thanks for the lessons!",
-            name: "Darrell Steward",
-            role: "Developer",
+            desc: "With Vaathiyar, I finally feel like someone &apos;s watching over my learning — and pushing me to finish",
+            name: "Harin",
+            role: "Final Year ECE Student",
         },
         {
             img: "https://cdn.prod.website-files.com/64184874f371bc785f2236eb/641addc146b44664c7dd4da6_Testimonial%203.webp",
-            desc: "The teachers are simply wonderful. I am very happy that I went to study English here. Lessons and practice at the highest level. Thanks for the lessons!",
-            name: "Darlene Robertson",
-            role: "Realtor",
-        },
-        {
-            img: "https://cdn.prod.website-files.com/64184874f371bc785f2236eb/641addc1ff0f86116af72b41_Testimonial%201.webp",
-            desc: "The teachers are simply wonderful. I am very happy that I went to study English here. Lessons and practice at the highest level. Thanks for the lessons!",
-            name: "Courtney Henry",
-            role: "Designer",
-        },
-
+            desc: "We &apos; ve improved course completion rates by 30% after introducing Vaathiyar in our training programs.",
+            name: "Prof. Suresh",
+            role: "Training Head, SRM Institute",
+        }
     ];
 
     const [data, setData] = useState(1);
@@ -68,12 +61,12 @@ function Testimonials() {
     };
 
     return (
-        <section className="w-full mt-16 px-1 md:px-8 xl:mt-33 xl:px-0 ">
+        <section className="w-full  px-1 md:px-8  xl:px-0 ">
 
-            <div className="w-full mt-16 ">
+            <div className="w-full  ">
 
                 {/* Header Section */}
-                <div className="flex flex-col justify-center items-center gap-4 mt-17">
+                <div className="flex flex-col justify-center items-center gap-4 ">
                     <p className="bottom-animated-img text-[20px] md:text-xl text-[#387975] ">Testimonials</p>
                     <h1 className="bottom-animated-img font-morebold text-[32px] md:text-3xl lg:text-4xl max-w-md text-center leading-9">
                         See What Our Students Say&apos;s
