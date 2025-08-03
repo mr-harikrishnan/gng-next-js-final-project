@@ -91,11 +91,11 @@ export default function Home() {
         <div className="max-w-292.5 pt-38 sm:pt-31 md:pt-46.5 lg:pt-41 xl:pt-65.5">
           <OurCourses></OurCourses>
           <img
-            className="object-cover w-full  absolute z-[-4] left-[0px] top-[-63px] h-[187rem]
-          sm:h-[105rem]
-          md:top-[-95px] md:h-[114.5rem]
-          lg:h-[78.6rem]
-          xl:top-[-175px] xl:h-[97.5rem]"
+            className="object-cover w-full  absolute z-[-4] left-[0px] top-[-63px] h-[197rem]
+          sm:h-[137.5rem]
+          md:top-[-95px] md:h-[149.4rem]
+          lg:h-[91.8rem]
+          xl:top-[-175px] xl:h-[107.9rem]"
             src={heroSectionBg.src} alt="" />
         </div>
 
@@ -107,17 +107,22 @@ export default function Home() {
 
       {/* -----section 5 VideoCourses-------- */}
 
-      <section className=" w-full  mt-15 xl:px-40  ">
+      <section className=" w-full flex justify-center   relative">
 
-        <VideoCourses></VideoCourses>
-
+        <div className="max-w-292.5 pt-31 sm:pt-31 md:pt-40.5 lg:pt-37.5 xl:pt-66">
+          <VideoCourses></VideoCourses>
+        </div>
       </section>
 
       {/* -----section 6 tesmonials-------- */}
 
-      <section className=" w-full  mt-15 xl:px-30  ">
+      <section className=" w-full  flex justify-center  ">
 
+        <div className="max-w-292.5 xl:pt-54.5    ">
         <Testmonials></Testmonials>
+
+        </div>
+
 
       </section>
 
