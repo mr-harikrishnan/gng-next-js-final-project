@@ -29,6 +29,23 @@ export const animateFromBottom = (target: string) => {
   });
 };
 
+// 1. Bottom to Top Animation
+export const animateFromBottomWithoutScrolingtrigger = (target: string) => {
+  const elements = gsap.utils.toArray(target) as gsap.DOMTarget[] 
+  
+  elements.forEach((element: gsap.DOMTarget) => {
+    gsap.fromTo(element, 
+      { y: 100, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+      }
+    );
+  });
+};
+
 // 2. Left to Right Animation
 export const animateFromLeft = (target: string) => {
   const elements = gsap.utils.toArray(target) as gsap.DOMTarget[] ;
@@ -122,6 +139,24 @@ export const animateZoomIn = (target: string) => {
   });
 };
 
+// 5. Scale Zoom Animation
+export const animateZoomInWithoutScrollTrigger = (target: string) => {
+  const elements = gsap.utils.toArray(target) as gsap.DOMTarget[]
+  
+  elements.forEach((element: gsap.DOMTarget) => {
+    gsap.fromTo(element,
+      { scale: 0, opacity: 0 },
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 1,
+        ease: "back.out(1.7)",
+        
+      }
+    );
+  });
+};
+
 // 6. Zoom Loop Animation (no scroll trigger needed)
 export const animateZoomLoop = (target: string) => {
   const elements = gsap.utils.toArray(target) as gsap.DOMTarget[]
@@ -147,6 +182,8 @@ export const runAnimations = () => {
     animateFromTop(".animate-top");
     animateZoomIn(".animate-zoom");
     animateZoomLoop(".animate-loop");
+    animateFromBottomWithoutScrolingtrigger(".animateFromBottomWithoutScrolingtrigger")
+    animateZoomInWithoutScrollTrigger(".animateZoomInWithoutScrollTrigger")
     
     // Refresh ScrollTrigger to recalculate positions
     ScrollTrigger.refresh();
