@@ -15,7 +15,7 @@ type DataTypeProps = {
 
 function PlanCardBig({ data }: DataTypeProps) {
     return (
-        <div className="flex items-center flex-col w-full max-w-[20rem]  bg-[#E2EDEC] rounded-lg border border-gray-300  text-white
+        <div className="flex items-center flex-col w-full max-w-[20rem] xl:min-w-[23rem]  bg-[#E2EDEC] rounded-lg border border-gray-300  text-white
         lg:py-5
         ">
             <h5 className="text-[22px] mt-9.5  font-morebold text-[#387975]">{data.type}</h5>

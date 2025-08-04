@@ -119,7 +119,7 @@ export default function Home() {
       <section className=" w-full  flex justify-center  ">
 
         <div className="max-w-292.5 pt-16.5 md:pt-22 xl:pt-54.5    ">
-        <Testmonials></Testmonials>
+          <Testmonials></Testmonials>
 
         </div>
 
@@ -128,9 +128,13 @@ export default function Home() {
 
       {/* -----section 7 plan-------- */}
 
-      <section className=" w-full bg-[#387975]  mt-15 xl:px-44  ">
+      <section className=" w-full bg-[#387975] flex justify-center  ">
 
-        <Plan></Plan>
+        <div className="max-w-292.5 pt-8 sm:pt-10 md:pt-5 xl:pt-17.5">
+          <Plan></Plan>
+        </div>
+
+
 
       </section>
 
