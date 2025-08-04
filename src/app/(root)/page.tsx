@@ -140,7 +140,9 @@ export default function Home() {
 
       {/* -----section 8 Find And Start Course-------- */}
 
-      <section className=" w-full  xl:px-44  relative ">
+      <section className=" w-full  flex justify-center  relative ">
+
+
         <div className="absolute top-[-40px] left-[0px] h-91  w-screen bg-[#387975] z-[-1] 
         sm:h-78
         md:h-65
@@ -148,8 +150,11 @@ export default function Home() {
         xl:h-50">
 
         </div>
+        <div className="max-w-292.5 pt-5 md:pt-0 md:-mt-4 xl:pt-12">
+          <FindAndStartCourse></FindAndStartCourse>
+        </div>
 
-        <FindAndStartCourse></FindAndStartCourse>
+
 
       </section>
 
