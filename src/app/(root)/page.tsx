@@ -118,7 +118,7 @@ export default function Home() {
 
       <section className=" w-full  flex justify-center  ">
 
-        <div className="max-w-292.5 xl:pt-54.5    ">
+        <div className="max-w-292.5 pt-16.5 md:pt-22 xl:pt-54.5    ">
         <Testmonials></Testmonials>
 
         </div>
