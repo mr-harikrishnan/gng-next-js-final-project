@@ -41,24 +41,24 @@ function PlanFullCard() {
 
     const planData = [
         {
-            type: "Individual",
-            price: "$50",
+            type: "Individual Plan",
+            price: "₹0",
             validity: "Per Month",
-            desc: "Pellentesque fringilla, massa sit amet feugiat mollis, leo turpis elementum justo, vel consequat ex urna ut massa maecenas justo sapien."
+            desc: "For students learning independently. Includes limited features like quiz nudges and basic tracking."
 
         },
         {
-            type: "Up to 3 people",
-            price: "$89",
-            validity: "Per Month",
-            desc: "Pellentesque fringilla, massa sit amet feugiat mollis, leo turpis elementum justo, vel consequat ex urna ut massa maecenas justo sapien."
+            type: "Campus Rollout",
+            price: "₹XX",
+            validity: "per student/month",
+            desc: "Full access to all AI features, analytics, and admin dashboards. Pricing based on batch size."
 
         },
         {
-            type: "Up to 5 people",
+            type: "Institutional License",
             price: "$119",
             validity: "Per Month",
-            desc: "Pellentesque fringilla, massa sit amet feugiat mollis, leo turpis elementum justo, vel consequat ex urna ut massa maecenas justo sapien."
+            desc: "Custom packages for colleges, universities, and edtech partners.\n "
 
         }
 
@@ -67,9 +67,10 @@ function PlanFullCard() {
     return (
         <div className="w-full grid grid-cols-1  mt-7 gap-6  p-4 justify-items-center
           sm:grid-cols-2 sm:place-items-center 
-          lg:grid-cols-3
-
-          md:mt-8    md:gap-8  md:p-8">
+          md:mt-8    md:gap-8  md:p-8
+          lg:grid-cols-3 lg:mt-5
+          xl:gap-23
+          ">
             <div className='zoom-scale col-span-1 '>
                 <PlanCardSmall  data={planData[0]}></PlanCardSmall>
             </div>
@@ -79,7 +80,7 @@ function PlanFullCard() {
             </div>
 
             <div className='zoom-scale col-span-1 sm:col-span-2 lg:col-span-1'>
-                <PlanCardSmall data={planData[0]}></PlanCardSmall>
+                <PlanCardSmall data={planData[2]}></PlanCardSmall>
             </div>
         </div>
     )

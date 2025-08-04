@@ -38,8 +38,8 @@ function Plan() {
       }, []);
 
     return (
-        <div className='w-full min-h-screen  py-8 md:py-16'>
-            <h1 className='bottom-animated-img text-[32px] font-morebold mt-8.5  md:text-5xl  text-center text-white  md:mb-16 px-4'>Choose Your Plan</h1>
+        <div className='w-full min-h-screen  py-6 md:py-16'>
+            <h1 className='bottom-animated-img text-[32px] font-morebold   md:text-[36px] lg:text-[42px]  text-center text-white  md:mb-5 px-4 '>Plans that Fit Every Need</h1>
             <div className='w-full'>
                 <PlanFullCard></PlanFullCard>
             </div>

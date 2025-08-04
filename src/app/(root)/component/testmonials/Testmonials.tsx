@@ -61,7 +61,7 @@ function Testimonials() {
     };
 
     return (
-        <section className="w-full  px-1 md:px-3  xl:px-0 ">
+        <section className="w-full  px-1 md:px-3  xl:px-0 mb-17.5 xl:mb-31">
 
             <div className="w-full  ">
 
