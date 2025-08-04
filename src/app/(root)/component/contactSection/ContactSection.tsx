@@ -1,8 +1,47 @@
+"use client"
+import {
+  animateFromTop,
+  animateFromBottom,
+  animateFromLeft,
+  animateFromRight,
+  animateZoomIn,
+} from "@/utils/gsapAnimations"
+import React, { useEffect } from 'react'
+
 import Button from '@/common/Button'
-import Footer from '@/common/Footer'
-import React from 'react'
 
 function ContactSection() {
+
+    const runAnimations = () => {
+        animateFromTop(".top-animated-img");
+        animateFromBottom(".bottom-animated-img");
+        animateFromLeft(".left-animated-img");
+        animateFromRight(".right-animated-img");
+        animateZoomIn(".zoom-scale");
+        
+      };
+    
+      useEffect(() => {
+        runAnimations();
+        const handleResize = () => {
+          // Clear previous animations and re-run (optional if you want to reset)
+          runAnimations();
+        };
+    
+        // Debounce resize
+        let resizeTimeout: NodeJS.Timeout;
+        const debouncedResize = () => {
+          clearTimeout(resizeTimeout);
+          resizeTimeout = setTimeout(handleResize, 200);
+        };
+    
+        window.addEventListener("resize", debouncedResize);
+        // Cleanup on unmount
+        return () => {
+          window.removeEventListener("resize", debouncedResize);
+        };
+      }, []);
+
     return (
         <div className="w-full px-4 xl:px-0">
             <div
@@ -19,7 +58,7 @@ function ContactSection() {
                   md:mt-0">
 
                     <h1
-                        className="font-morebold leading-9 text-center xl:text-left lg:text-left text-[32px] sm:text-3xl md:text-[36px] lg:text-[42px] lg:leading-[3.25rem] ">
+                        className="zoom-scale font-morebold leading-9 text-center xl:text-left lg:text-left text-[32px] sm:text-3xl md:text-[36px] lg:text-[42px] lg:leading-[3.25rem] ">
                         Want Vaathiyar at Your Campus?
                     </h1>
 
@@ -29,26 +68,26 @@ function ContactSection() {
 
 
                 {/* Form Section */}
-                <div className="grid grid-cols-1 gap-4 w-full px-5 sm:px-12 md:grid-cols-2 md:gap-5 md:px-0 xl:pt-12">
+                <div className="bottom-animated-img grid grid-cols-1 gap-4 w-full px-5 sm:px-12 md:grid-cols-2 md:gap-5 md:px-0 xl:pt-12">
                     <input
                         type="text"
                         placeholder="Name*"
-                        className="border border-gray-300 placeholder-gray-600 rounded-lg py-[15px] px-5 text-[18px] w-full"
+                        className="left-animated-img border border-gray-300 placeholder-gray-600 rounded-lg py-[15px] px-5 text-[18px] w-full"
                     />
                     <input
                         type="text"
                         placeholder="Institute*"
-                        className="border border-gray-300 placeholder-gray-600 rounded-lg py-[15px] px-5 text-[18px] w-full"
+                        className="right-animated-img border border-gray-300 placeholder-gray-600 rounded-lg py-[15px] px-5 text-[18px] w-full"
                     />
                     <input
                         type="text"
                         placeholder="Mobile No *"
-                        className="border border-gray-300 placeholder-gray-600 rounded-lg py-[15px] px-5 text-[18px] w-full"
+                        className="left-animated-img border border-gray-300 placeholder-gray-600 rounded-lg py-[15px] px-5 text-[18px] w-full"
                     />
                     <input
                         type="text"
                         placeholder="Email *"
-                        className="border border-gray-300 placeholder-gray-600 rounded-lg py-[15px] px-5 text-[18px] w-full"
+                        className="right-animated-img border border-gray-300 placeholder-gray-600 rounded-lg py-[15px] px-5 text-[18px] w-full"
                     />
 
                     {/* Submit Button - spans full width below inputs */}

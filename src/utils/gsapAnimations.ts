@@ -1,83 +1,160 @@
-
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export const animateFromTop = (target: string) => {
-  gsap.fromTo(
-    target,
-    { y: -100, opacity: 0 },
-    {
-      y: 0,
-      opacity: 1,
-      duration: 0.6,
-      stagger: 0.2,
-      ease: "power2.out",
-    }
-  );
-};
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
+// 1. Bottom to Top Animation
 export const animateFromBottom = (target: string) => {
-  gsap.fromTo(
-    target,
-    { y: 100, opacity: 0 },
-    {
-      y: 0,
-      opacity: 1,
-      duration: 0.6,
-      stagger: 0.01,
-      ease: "power2.out",
-    }
-  );
-};
-
-export const animateFromLeft = (target: string) => {
-  gsap.fromTo(
-    target,
-    { x: -100, opacity: 0 },
-    {
-      x: 0,
-      opacity: 1,
-      duration: 0.6,
-      stagger: 0.01,
-      ease: "power2.out",
-    }
-  );
-};
-
-export const animateFromRight = (target: string) => {
-  gsap.fromTo(
-    target,
-    { x: 100, opacity: 0 },
-    {
-      x: 0,
-      opacity: 1,
-      duration: 0.6,
-      stagger: 0.01,
-      ease: "power2.out",
-    }
-  );
-};
-
-
-export const animateZoomIn = (target: string) => {
-  gsap.fromTo(
-    target,
-    { scale: 0.5, opacity: 0 },
-    {
-      scale: 1,
-      opacity: 1,
-      duration: 0.6,
-      stagger: 0.01,
-      ease: "power2.out",
-    }
-  );
-};
-
-export const animateZoomLoop = (target: string) => {
-  gsap.to(target, {
-    scale: 0.9,
-    duration: 1.2,
-    ease: "power1.inOut",
-    repeat: -1,
-    yoyo: true, // 👈 go back and forth
+  const elements = gsap.utils.toArray(target);
+  
+  elements.forEach((element: any) => {
+    gsap.fromTo(element, 
+      { y: 100, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: element,
+          start: "top 90%",
+          end: "bottom 10%",
+          toggleActions: "play none none reverse",
+          markers: false // Set to true for debugging
+        }
+      }
+    );
   });
+};
+
+// 2. Left to Right Animation
+export const animateFromLeft = (target: string) => {
+  const elements = gsap.utils.toArray(target);
+  
+  elements.forEach((element: any) => {
+    gsap.fromTo(element,
+      { x: -100, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: element,
+          start: "top 90%",
+          end: "bottom 10%",
+          toggleActions: "play none none reverse"
+        }
+      }
+    );
+  });
+};
+
+
+// 3. Right to Left Animation
+export const animateFromRight = (target: string) => {
+  const elements = gsap.utils.toArray(target);
+  
+  elements.forEach((element: any) => {
+    gsap.fromTo(element,
+      { x: 100, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: element,
+          start: "top 90%",
+          end: "bottom 10%",
+          toggleActions: "play none none reverse"
+        }
+      }
+    );
+  });
+};
+
+// 4. Top to Bottom Animation
+export const animateFromTop = (target: string) => {
+  const elements = gsap.utils.toArray(target);
+  
+  elements.forEach((element: any) => {
+    gsap.fromTo(element,
+      { y: -100, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: element,
+          start: "top 90%",
+          end: "bottom 10%",
+          toggleActions: "play none none reverse"
+        }
+      }
+    );
+  });
+};
+
+// 5. Scale Zoom Animation
+export const animateZoomIn = (target: string) => {
+  const elements = gsap.utils.toArray(target);
+  
+  elements.forEach((element: any) => {
+    gsap.fromTo(element,
+      { scale: 0, opacity: 0 },
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 1,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+          trigger: element,
+          start: "top 90%",
+          end: "bottom 10%",
+          toggleActions: "play none none reverse"
+        }
+      }
+    );
+  });
+};
+
+// 6. Zoom Loop Animation (no scroll trigger needed)
+export const animateZoomLoop = (target: string) => {
+  const elements = gsap.utils.toArray(target);
+  
+  elements.forEach((element: any) => {
+    gsap.to(element, {
+      scale: 1.1,
+      duration: 1.5,
+      ease: "power2.inOut",
+      yoyo: true,
+      repeat: -1
+    });
+  });
+};
+
+// Simple function to run all animations
+export const runAnimations = () => {
+  // Add a small delay to ensure DOM is ready
+  setTimeout(() => {
+    animateFromBottom(".animate-bottom");
+    animateFromLeft(".animate-left");
+    animateFromRight(".animate-right");
+    animateFromTop(".animate-top");
+    animateZoomIn(".animate-zoom");
+    animateZoomLoop(".animate-loop");
+    
+    // Refresh ScrollTrigger to recalculate positions
+    ScrollTrigger.refresh();
+  }, 100);
+};
+
+// Function to clean up animations
+export const killAllAnimations = () => {
+  gsap.killTweensOf("*");
+  ScrollTrigger.getAll().forEach(trigger => trigger.kill());
 };
