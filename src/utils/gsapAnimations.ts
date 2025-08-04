@@ -7,9 +7,9 @@ if (typeof window !== "undefined") {
 
 // 1. Bottom to Top Animation
 export const animateFromBottom = (target: string) => {
-  const elements = gsap.utils.toArray(target);
+  const elements = gsap.utils.toArray(target) as gsap.DOMTarget[] 
   
-  elements.forEach((element: any) => {
+  elements.forEach((element: gsap.DOMTarget) => {
     gsap.fromTo(element, 
       { y: 100, opacity: 0 },
       {
@@ -31,9 +31,9 @@ export const animateFromBottom = (target: string) => {
 
 // 2. Left to Right Animation
 export const animateFromLeft = (target: string) => {
-  const elements = gsap.utils.toArray(target);
+  const elements = gsap.utils.toArray(target) as gsap.DOMTarget[] ;
   
-  elements.forEach((element: any) => {
+  elements.forEach((element: gsap.DOMTarget) => {
     gsap.fromTo(element,
       { x: -100, opacity: 0 },
       {
@@ -55,9 +55,9 @@ export const animateFromLeft = (target: string) => {
 
 // 3. Right to Left Animation
 export const animateFromRight = (target: string) => {
-  const elements = gsap.utils.toArray(target);
+  const elements = gsap.utils.toArray(target) as gsap.DOMTarget[]
   
-  elements.forEach((element: any) => {
+  elements.forEach((element: gsap.DOMTarget) => {
     gsap.fromTo(element,
       { x: 100, opacity: 0 },
       {
@@ -78,9 +78,9 @@ export const animateFromRight = (target: string) => {
 
 // 4. Top to Bottom Animation
 export const animateFromTop = (target: string) => {
-  const elements = gsap.utils.toArray(target);
+  const elements = gsap.utils.toArray(target) as gsap.DOMTarget[]
   
-  elements.forEach((element: any) => {
+  elements.forEach((element: gsap.DOMTarget) => {
     gsap.fromTo(element,
       { y: -100, opacity: 0 },
       {
@@ -101,9 +101,9 @@ export const animateFromTop = (target: string) => {
 
 // 5. Scale Zoom Animation
 export const animateZoomIn = (target: string) => {
-  const elements = gsap.utils.toArray(target);
+  const elements = gsap.utils.toArray(target) as gsap.DOMTarget[]
   
-  elements.forEach((element: any) => {
+  elements.forEach((element: gsap.DOMTarget) => {
     gsap.fromTo(element,
       { scale: 0, opacity: 0 },
       {
@@ -124,9 +124,9 @@ export const animateZoomIn = (target: string) => {
 
 // 6. Zoom Loop Animation (no scroll trigger needed)
 export const animateZoomLoop = (target: string) => {
-  const elements = gsap.utils.toArray(target);
+  const elements = gsap.utils.toArray(target) as gsap.DOMTarget[]
   
-  elements.forEach((element: any) => {
+  elements.forEach((element: gsap.DOMTarget) => {
     gsap.to(element, {
       scale: 1.1,
       duration: 1.5,
