@@ -5,7 +5,9 @@ import {
   animateFromLeft,
   animateFromRight,
   animateZoomIn,
-  animateZoomLoop
+  animateZoomLoop,
+  animateFromBottomWithoutScrolingtrigger,
+  animateZoomInWithoutScrollTrigger
 } from "@/utils/gsapAnimations"
 import React, { useEffect } from 'react'
 
@@ -38,7 +40,9 @@ function AnimationBanner() {
     animateFromLeft(".left-animated-img");
     animateFromRight(".right-animated-img");
     animateZoomIn(".zoom-scale");
-    animateZoomLoop(".zoom-scale-loop")
+    animateZoomLoop(".zoom-scale-loop");
+    animateFromBottomWithoutScrolingtrigger(".animateFromBottomWithoutScrolingtrigger")
+    animateZoomInWithoutScrollTrigger(".animateZoomInWithoutScrollTrigger")
   };
 
   useEffect(() => {
@@ -87,8 +91,8 @@ function AnimationBanner() {
       </div>
 
       <div className="mt-1.5 lg:ml-1.5  relative">
-        <img src={anbhonj.src} alt="" className="top-animated-img absolute top-25.5 right-36 w-22 z-10 sm:top-44.5 sm:-left-31 md:top-[202px] md:left-[-105px]  sm:w-31 lg:-left-27.5 lg:top-42 xl:top-47 xl:-left-33" />
-        <img src={anPe4.src} alt="" className="zoom-scale mt-8.5 mr-12 w-33 sm:w-61 sm:-ml-7 md:w-67 md:mr-21 md:mt-9 lg:w-59 lg:mt-13.5 lg:-ml-4 xl:w-65 xl:-ml-10" />
+        <img src={anbhonj.src} alt="" className="animateFromBottomWithoutScrolingtrigger absolute top-25.5 right-36 w-22 z-10 sm:top-44.5 sm:-left-31 md:top-[202px] md:left-[-105px]  sm:w-31 lg:-left-27.5 lg:top-42 xl:top-47 xl:-left-33" />
+        <img src={anPe4.src} alt="" className="animateZoomInWithoutScrollTrigger  mt-8.5 mr-12 w-33 sm:w-61 sm:-ml-7 md:w-67 md:mr-21 md:mt-9 lg:w-59 lg:mt-13.5 lg:-ml-4 xl:w-65 xl:-ml-10" />
         <img src={greenCircle.src} alt="" className="zoom-scale-loop absolute right-[11px] top-[-8px] w-[40px] sm:right-[-19px] sm:top-[14px] md:right-[0px] md:top-[23px]  lg:left-[20px] lg:top-[9px] xl:left-[19px] xl:top-[4px]" />
 
       </div>
