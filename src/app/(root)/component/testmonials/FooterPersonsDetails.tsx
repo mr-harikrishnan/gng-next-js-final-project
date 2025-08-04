@@ -17,13 +17,13 @@ function FooterPersonsDetails({ dataArry = [], useStateData, correctPerson }: Fo
     const index = useStateData ?? 0;
     return (
         <div className='w-full'>
-            <div className='w-full flex justify-center mb-8 '>
-                <div className={`${correctPerson == true ? "bg-[#387975] " : "bg-gray-300"} h-[2px] w-full mx-50 mt-9 min-w-50`}></div>
+            <div className='w-full flex justify-center mb-8  '>
+                <div className={`${correctPerson == true ? "bg-[#387975] " : "bg-gray-300"} h-[2px] w-full mx-2 mt-9 min-w-50`}></div>
             </div>
             {/* User 1 */}
-            <div className='flex justify-center w-full '>
+            <div className='flex justify-start w-full mr-12 '>
 
-                <div className='flex items-center gap-4'>
+                <div className='flex items-center  gap-4'>
                     <div className=''>
                         <img
                             src={dataArry[index].img}
