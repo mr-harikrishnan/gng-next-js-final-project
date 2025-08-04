@@ -9,12 +9,12 @@ import OurCourses from "./component/OurCoursesSection/OurCourses";
 import VideoCourses from "./component/VideoCoursesSection/VideoCourses";
 import Testmonials from "./component/testmonials/Testmonials";
 import Plan from "./component/plan/Plan";
-import FindAndStartCourse from "./component/findAndStartCourse/FindAndStartCourse";
 import Footer from "@/common/Footer";
 import ClassTwinkle from "./component/teachersSection/ClassTwinkle";
 import teacherSecBg from "@/assets/teachersSection/teachersSection.bg.png"
 import servicesSecBg from "@/assets/services/servicesbg.png"
 import NavBar from "@/common/NavBar";
+import ContactSection from "./component/contactSection/ContactSection";
 
 
 
@@ -147,11 +147,11 @@ export default function Home() {
         sm:h-78
         md:h-65
         lg:h-45
-        xl:h-50">
+        xl:h-58">
 
         </div>
         <div className="max-w-292.5 pt-5 md:pt-0 md:-mt-4 xl:pt-12">
-          <FindAndStartCourse></FindAndStartCourse>
+          <ContactSection></ContactSection>
         </div>
 
 
@@ -160,17 +160,15 @@ export default function Home() {
 
       {/* -----section 8 Footer-------- */}
 
-      <section className=" w-full  mt-15 xl:px-44  relative">
-        <div className="absolute top-[-337px] left-[0px] h-[93.5rem]   w-screen bg-gradient-to-b from-white to-[#e3f4ef] z-[-4] 
-        sm:top-[-330px] sm:h-[82rem]
-        md:top-[-330px] md:h-[69.5rem]
-        lg:top-[-330px] lg:h-[50.5rem]
+      <section className=" w-full flex justify-center  relative">
+        <div className="absolute  h-100 bottom-0  w-screen bg-gradient-to-b from-white to-[#e3f4ef] z-[-4]  
+       
         
         "></div>
 
-        <Footer></Footer>
-
-
+        <div>
+          <Footer></Footer>
+        </div>
 
       </section>
 
