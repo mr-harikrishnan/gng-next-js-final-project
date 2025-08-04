@@ -48,7 +48,7 @@ function ClassTwinkle() {
     
     {/* Left Image Section */}
     <div className="relative sm:flex sm:items-center sm:justify-center w-full">
-      <img src={stackImage.src} alt="Stack" className="w-full  mt-16 sm:max-w-80 md:max-w-98 lg:min-w-127.5 xl:min-w-142 xl:-ml-2" />
+      <img src={stackImage.src} alt="Stack" className="bottom-animated-img w-full  mt-16 sm:max-w-80 md:max-w-98 lg:min-w-127.5 xl:min-w-142 xl:-ml-2" />
       
       <img
         src={expImage.src}
@@ -58,15 +58,15 @@ function ClassTwinkle() {
     </div>
 
     {/* Right Text Content Section */}
-    <div className="w-full flex flex-col items-center lg:items-start justify-center gap-4 lg:gap-6 py-12">
-      <h1 className="font-morebold text-white text-[32px] md:text-[36px] text-center lg:text-left leading-10 md:mt-7">
+    <div className="bottom-animated-img w-full flex flex-col items-center lg:items-start justify-center gap-4 lg:gap-6 py-12">
+      <h1 className="bottom-animated-img font-morebold text-white text-[32px] md:text-[36px] text-center lg:text-left leading-10 md:mt-7">
         Why Students & Colleges Love Vaathiyar.ai
       </h1>
-      <p className="text-white text-[20px] text-center lg:text-left">
+      <p className="bottom-animated-img  text-white text-[20px] text-center lg:text-left">
         Vaathiyar makes learning stick. Instead of watching and forgetting, students get mini-quizzes, reminders, and personalized feedback — exactly when they need it. For colleges, Vaathiyar brings visibility into student progress, training impact, and performance metrics across batches.
       </p>
 
-      <div className="mt-[29px]">
+      <div className="bottom-animated-img mt-[29px]">
         <Button text={"About Us"} bgColour={"white"} textColour={"black"} />
       </div>
     </div>
