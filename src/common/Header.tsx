@@ -1,7 +1,8 @@
 "use client"
 import React from 'react'
-import logo from "@/assets/vathiyar-ai-logo.png";
+import logo from "@/assets/vathiyar.ai-logo.png";
 import Link from 'next/link';
+import Button from './Button';
 
 type SideBarToggleProps = {
     toggleSideBar: () => void;
@@ -9,32 +10,32 @@ type SideBarToggleProps = {
 
 function Header({ toggleSideBar }: SideBarToggleProps) {
     return (
-        <header className="absolute flex justify-center  w-full  px-3.5 py-4 lg:px-3.5  lg:mt-2.5  ">
+        <header className="absolute flex justify-center  w-full  px-3.5 py-4 lg:px-3.5  lg:mt-2.5  z-10">
 
-            <div className="  flex w-full justify-between  max-w-292.5  items-center ">
+            <div className=" gap-8 flex w-full justify-between  max-w-292.5  items-center ">
 
                 <div>
-                   <Link href={"/"}> <img src={logo.src} className='cursor-pointer ' alt="" /> </Link>
+                    <Link href={"/"}> <img src={logo.src} className='w-[60%] cursor-pointer ' alt="" /> </Link>
                 </div>
 
                 <div className="hidden lg:flex justify-center     ">
 
                     <div className="flex  items-center justify-center gap-10">
-                        <p className="text-[20px] text-center text-[#535756] font-medium cursor-pointer tracking-wide text-nowrap">Demos</p>
-                        <p className="text-[20px] text-center text-[#535756] font-medium cursor-pointer tracking-wide text-nowrap">About Us</p>
-                        <p className="text-[20px] text-center text-[#535756] font-medium cursor-pointer tracking-wide text-nowrap">Courses</p>
-                        <p className="text-[20px] text-center text-[#535756] font-medium cursor-pointer tracking-wide text-nowrap">Events</p>
-                        <p className="text-[20px] text-center text-[#535756] font-medium cursor-pointer tracking-wide text-nowrap">All Pages</p>
+                        <p className="text-[20px] text-center text-black hover:text-primary font-medium cursor-pointer tracking-wide text-nowrap">Demos</p>
+                        <p className="text-[20px] text-center text-black hover:text-primary font-medium cursor-pointer tracking-wide text-nowrap">About Us</p>
+                        <p className="text-[20px] text-center text-black hover:text-primary font-medium cursor-pointer tracking-wide text-nowrap">Courses</p>
+                        <p className="text-[20px] text-center text-black hover:text-primary font-medium cursor-pointer tracking-wide text-nowrap">Events</p>
+                        <p className="text-[20px] text-center text-black hover:text-primary font-medium cursor-pointer tracking-wide text-nowrap">All Pages</p>
                     </div>
 
                 </div>
 
                 <div className="flex items-center gap-8">
-                    <p className=" text-[20px] text-center text-[#535756] font-medium cursor-pointer tracking-wide text-nowrap">Cart</p>
+                    <p className=" text-[20px] text-center text-black hover:text-primary font-medium cursor-pointer tracking-wide text-nowrap">Cart</p>
 
-                    <button className="hidden lg:block bg-[#387975] px-8 rounded-xl py-3 text-[1.3rem]  text-white font-medium cursor-pointer tracking-wide text-nowrap hover:bg-[#E5FEFB] hover:text-[#387975] hover:border">
-                        Log in
-                    </button>
+                    <div className="hidden lg:block cursor-pointer ">
+                        <Button text={"Log In"} bgColour={"primary"} ></Button>
+                    </div>
 
                     <svg
                         onClick={toggleSideBar}

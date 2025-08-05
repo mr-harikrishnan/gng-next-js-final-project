@@ -9,7 +9,7 @@ import React, { useEffect } from 'react'
 
 import personIcon from "@/assets/teachersSection/person_icon.png"
 
-function TeacherHeadline() {
+function LAndGHeadline() {
 
   const runAnimations = () => {
     animateFromBottom(".bottom-animated-img")
@@ -55,4 +55,4 @@ function TeacherHeadline() {
   )
 }
 
-export default TeacherHeadline
+export default LAndGHeadline

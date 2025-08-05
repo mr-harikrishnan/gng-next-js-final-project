@@ -11,13 +11,11 @@ function NavBar() {
     setSideBar(!sideBar);
   };
   return (
-    <div>
+    <div className='z-10'>
       <Sidebar setSideBar={setSideBar} sideBar={sideBar} toggleSideBar={toggleSideBar} />
       <div
         onClick={toggleSideBar}
         className={`lg:hidden ${sideBar == true ? "block" : "hidden"} fixed inset-0 bg-[#00000060] bg-opacity-10 -sm z-[40]`}></div>
-
-
 
 
       <Header toggleSideBar={toggleSideBar}></Header>

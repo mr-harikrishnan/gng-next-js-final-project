@@ -23,7 +23,7 @@ function PlanCardSmall({ data }: DataTypeProps) {
             <p className="text-[16px] mt-7.5   text-center text-white/90  px-4">{data.desc.split('\n').map((line, i) => <span key={i}>{line}<br/></span>)}</p>
 
             <div className='px-6 mt-10 mb-7.5'>
-                <Button text={"Get Started"} bgColour={"white"} textColour={"black"}></Button>
+                <Button text={"Get Started"} bgColour={"secondary"} ></Button>
             </div>
         </div>
     )

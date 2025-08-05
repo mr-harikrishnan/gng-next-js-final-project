@@ -92,7 +92,7 @@ function ContactSection() {
 
                     {/* Submit Button - spans full width below inputs */}
                     <div className="col-span-1 md:col-span-2 flex justify-center md:justify-end mt-4 md:mt-6">
-                        <Button text={"Submit"} bgColour={"#387975"} textColour={"white"} />
+                        <Button text={"Submit"} bgColour={"primary"}  />
                     </div>
                 </div>
 

@@ -2,21 +2,22 @@
 import heroSectionBg from "@/assets/homeSection/1_white_and_green_bg.jpg";
 import AnimationBanner from "./component/heroSection/AnimationBanner";
 import InformationContainer from "./component/heroSection/InformationContainer";
-import TeacherHeadline from "./component/teachersSection/TeacherHeadline";
-import TeacherCard from "./component/teachersSection/TeacherDetails";
+import TeacherHeadline from "./component/learingsAndGuidansSection/LAndGHeadline";
+import TeacherCard from "./component/learingsAndGuidansSection/LAndgcardDetails";
 import Services from "./component/servicesSection/Services";
 import OurCourses from "./component/OurCoursesSection/OurCourses";
 import VideoCourses from "./component/VideoCoursesSection/VideoCourses";
 import Testmonials from "./component/testmonials/Testmonials";
 import Plan from "./component/plan/Plan";
 import Footer from "@/common/Footer";
-import ClassTwinkle from "./component/teachersSection/ClassTwinkle";
-import teacherSecBg from "@/assets/teachersSection/teachersSection.bg.png"
-import servicesSecBg from "@/assets/services/servicesbg.png"
+import ClassTwinkle from "./component/learingsAndGuidansSection/LoveVathiyar";
+
 import NavBar from "@/common/NavBar";
 import ContactSection from "./component/contactSection/ContactSection";
-
-
+import LightBgSvg from "@/assets/svg/svgFiles/lightBgSvg";
+import TopBottomCurveSvg from "@/assets/svg/svgFiles/TopBottomCurveSvg";
+import DarkBottomCurveOnlySvg from "@/assets/svg/svgFiles/DarkBottomCurveOnlySvg";
+import LightBottomCurveSvg from "@/assets/svg/svgFiles/LightBottomCurveSvg";
 
 
 export default function Home() {
@@ -29,54 +30,51 @@ export default function Home() {
       <NavBar />
 
       {/* ----- section 1 --------*/}
-      <section
-        style={{ backgroundImage: `url(${heroSectionBg.src})` }}
-        className="bg-cover bg-center w-full  pt-25   flex justify-center">
 
-        <div className="w-full h-full flex flex-col  lg:flex-row gap-10 lg:gap-4.5 max-w-292.5 ">
-          <div className="w-full flex justify-center  mx-auto  lg:w-[50%] relative ">
-            <AnimationBanner></AnimationBanner>
-          </div>
-          <div className="  mb-15  bg-gray lg:w-[50%] lg:flex ">
-            <InformationContainer></InformationContainer>
-          </div>
+      <section className="bg-cover bg-center w-full pt-28 flex justify-center relative overflow-hidden min-h-[500px]">
+        {/* SVG as background layer - FIXED: Added h-full */}
+        <div className="absolute top-0 left-0 w-full h-full z-[-1]"> {/* ← Added h-full */}
+          <LightBgSvg />
         </div>
 
+        <div className="w-full h-full  flex flex-col lg:flex-row gap-10 lg:gap-4.5 max-w-292.5">
+          <div className="w-full flex justify-center mx-auto lg:w-[50%] relative">
+            <AnimationBanner />
+          </div>
+          <div className="mb-20 bg-gray lg:w-[50%] lg:flex">
+            <InformationContainer />
+          </div>
+        </div>
       </section>
-
 
 
       {/* -----section 2 teachers details-------- */}
 
-      <section className=" w-full flex justify-center   relative ">
-
-        <div className="w-full max-w-292.5 mt-7 overflow-hidden">
-          <TeacherHeadline></TeacherHeadline>
-          <TeacherCard></TeacherCard>
-          <ClassTwinkle></ClassTwinkle>
-          <img
-            className='w-full absolute object-cover top-[617px] left-0 z-[-2] h-[153rem] sm:h-[93.5rem] sm:top-[445px] md:h-[93.6rem] md:top-[599px]  lg:h-[61.5rem] lg:top-[385px] xl:h-[60.5rem] xl:top-[465px]        '
-            src={teacherSecBg.src}
-            alt=""
-          />
+      <section className="w-full flex justify-center relative min-h-[600px]">
+        {/* SVG Background - ensure it covers full height */}
+        <div className="absolute top-[610px] sm:top-[565px] md:top-[598px] lg:top-[385px] xl:top-[465px] left-1/2 transform -translate-x-1/2 w-full h-full z-[-1]">
+          <TopBottomCurveSvg />
         </div>
 
+
+        <div className="w-full max-w-292.5 mt-7 overflow-hidden relative z-10">
+          <TeacherHeadline />
+          <TeacherCard />
+          <ClassTwinkle />
+        </div>
       </section>
 
 
       {/* -----section 3 services-------- */}
 
-      <section className=" w-full   flex justify-center  relative ">
+      <section className="w-full flex justify-center  relative ">
+
+        <div className="absolute top-[-50px] sm:top-[-52px] md:top-[-33px] lg:top-[-20px] xl:top-[78px] xl:m-[-1px] left-0 w-full  h-full z-[-1]">
+          <DarkBottomCurveOnlySvg></DarkBottomCurveOnlySvg>
+        </div>
 
         <div className="max-w-292.5 pt-5 ">
           <Services></Services>
-          <img
-            className="object-cover w-full h-[112rem] absolute z-[-3] left-[0px] top-[-105px]   
-        sm:h-[72.8rem] sm:top-[-138px]
-        md:h-[70.6rem] 
-        lg:h-[57.1rem]
-        xl:top-[12px] xl:h-[57.5rem] "
-            src={servicesSecBg.src} alt="" />
         </div>
 
 
@@ -87,20 +85,12 @@ export default function Home() {
       {/* -----section 4 OurCourses-------- */}
 
       <section className=" w-full  flex justify-center  relative ">
-
+        <div className="absolute top-50 left-0 w-full  h-full z-[-1]">
+          <LightBottomCurveSvg></LightBottomCurveSvg>
+        </div>
         <div className="max-w-292.5 pt-38 sm:pt-31 md:pt-46.5 lg:pt-41 xl:pt-65.5">
           <OurCourses></OurCourses>
-          <img
-            className="object-cover w-full  absolute z-[-4] left-[0px] top-[-63px] h-[197rem]
-          sm:h-[137.5rem]
-          md:top-[-95px] md:h-[149.4rem]
-          lg:h-[91.8rem]
-          xl:top-[-175px] xl:h-[107.9rem]"
-            src={heroSectionBg.src} alt="" />
         </div>
-
-
-
       </section>
 
 
@@ -128,7 +118,7 @@ export default function Home() {
 
       {/* -----section 7 plan-------- */}
 
-      <section className=" w-full bg-[#387975] flex justify-center  ">
+      <section className=" w-full bg-[#6754A4] flex justify-center  ">
 
         <div className="max-w-292.5 pt-8 sm:pt-10 md:pt-5 xl:pt-17.5">
           <Plan></Plan>
@@ -143,7 +133,7 @@ export default function Home() {
       <section className=" w-full  flex justify-center  relative ">
 
 
-        <div className="absolute top-[-40px] left-[0px] h-91  w-screen bg-[#387975] z-[-1] 
+        <div className="absolute top-[-40px] left-[0px] h-91  w-screen bg-[#6754A4] z-[-1] 
         sm:h-78
         md:h-65
         lg:h-45
@@ -161,7 +151,7 @@ export default function Home() {
       {/* -----section 8 Footer-------- */}
 
       <section className=" w-full flex justify-center  relative">
-        <div className="absolute  h-100 bottom-0  w-screen bg-gradient-to-b from-white to-[#e3f4ef] z-[-4]  
+        <div className="absolute  h-100 bottom-0  w-screen bg-gradient-to-b from-white to-[#9588C0] z-[-4]  
        
         
         "></div>
