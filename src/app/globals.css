@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* global.css */
+
+@theme {
+  --color-primary: #6754A4;
+  --color-secondary: #9588C0;
+  --color-lighter:"#FAF5FF";
+  --bg-primary: #6754A4;
+  --bg-secondary: #9588C0;
+  --bg-lighter:"purple-50";
+
 }
 
 @font-face {
@@ -26,13 +33,6 @@
 
 @utility font-primary {
   font-family: primary;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {

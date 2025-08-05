@@ -13,7 +13,7 @@ import expImage from "@/assets/teachersSection/experience-image.png"
 
 
 
-function ClassTwinkle() {
+function LoveVathiyar() {
 
   const runAnimations = () => {
     animateFromBottom(".bottom-animated-img"),
@@ -67,7 +67,7 @@ function ClassTwinkle() {
       </p>
 
       <div className="bottom-animated-img mt-[29px]">
-        <Button text={"About Us"} bgColour={"white"} textColour={"black"} />
+        <Button text={"About Us"} bgColour={"white"}  />
       </div>
     </div>
 
@@ -77,4 +77,4 @@ function ClassTwinkle() {
   )
 }
 
-export default ClassTwinkle
+export default LoveVathiyar

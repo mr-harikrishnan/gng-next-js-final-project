@@ -8,6 +8,7 @@ import no1Image from "@/assets/services/number1Image.png"
 import no2Image from "@/assets/services/number2Image.png"
 import no3Image from "@/assets/services/number3Image.png"
 import no4Image from "@/assets/services/number4Image.png"
+import NumberIcon from "@/common/icons/NumberIcon"
 
 function ServiceCard() {
 
@@ -78,9 +79,7 @@ function ServiceCard() {
              ${index == 1 ? "sm:mt-15" : ""} ${index == 2 ? "sm:-mt-12 lg:-mt-15" : ""}
              `}>
             <div className="w-full flex justify-center sm:justify-start">
-              <img
-                className='w-14 '
-                src={data.img.src} alt="" />
+              <NumberIcon index={index+1}></NumberIcon>
             </div>
             <h1 className='font-morebold mt-4  text-[22px] '>{data.headline}</h1>
             <p className={`text-center   ${index == 0 ? "text-gray-500" : "text-white"} mt-4 mb-9 sm:mb-0 sm:text-left`}>{data.desc}</p>
