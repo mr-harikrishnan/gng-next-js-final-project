@@ -18,7 +18,7 @@ function VideoCourseCard({ data }: DataProps) {
                 <img
                     className='rounded-lg'
                     src={data.img} alt="" />
-                <p className='absolute text-[18px]  bg-[#387975] rounded-[30px] text-white px-5.5 py-1 top-3 left-3'>Free</p>
+                <p className='absolute text-[18px]  bg-primary rounded-[30px] text-white px-5.5 py-1 top-3 left-3'>Free</p>
             </div>
 
             
@@ -38,7 +38,7 @@ function VideoCourseCard({ data }: DataProps) {
             <div className='mt-8 hidden flex-col gap-4 md:flex'>
                 <h1 className='font-morebold text-[22px] '>{data.topic}</h1>
                 <p>{data.desc.split('\n').map((line, i) => <span key={i}>{line}<br/></span>)}</p>
-                <Link href={""} className='text-[#387975] text-[18px] underline underline-offset-2 '>View More</Link>
+                <Link href={""} className='text-primary text-[18px] underline underline-offset-2 '>View More</Link>
             </div>
 
         </div>

@@ -6,10 +6,10 @@ import {
 import React, { useEffect } from 'react'
 
 import Button from '@/common/Button'
-import CourseCard from '@/common/CourseCard'
+import CourseCard from '@/common/LearningTrackCard'
 
 
-function OurCourses() {
+function LearningTracks() {
 
     const runAnimations = () => {
 
@@ -116,4 +116,4 @@ function OurCourses() {
     )
 }
 
-export default OurCourses
+export default LearningTracks
