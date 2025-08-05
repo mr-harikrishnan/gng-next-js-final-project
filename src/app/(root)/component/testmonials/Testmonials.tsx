@@ -1,16 +1,15 @@
 "use client";
 import {
-    
     animateFromBottom,
     animateFromLeft,
     animateFromRight,
-    
-} from "@/utils/gsapAnimations"
-import React, { useEffect, useState } from 'react'
-
+} from "@/utils/gsapAnimations";
+import React, { useEffect, useRef, useState } from 'react';
+import { gsap } from "gsap";
 import FooterPersonsDetails from "./FooterPersonsDetails";
 
 function Testimonials() {
+    const contentRef = useRef<HTMLDivElement | null>(null);
 
     const runAnimations = () => {
         animateFromBottom(".bottom-animated-img");
@@ -21,11 +20,9 @@ function Testimonials() {
     useEffect(() => {
         runAnimations();
         const handleResize = () => {
-            // Clear previous animations and re-run (optional if you want to reset)
             runAnimations();
         };
 
-        // Debounce resize
         let resizeTimeout: NodeJS.Timeout;
         const debouncedResize = () => {
             clearTimeout(resizeTimeout);
@@ -33,7 +30,6 @@ function Testimonials() {
         };
 
         window.addEventListener("resize", debouncedResize);
-        // Cleanup on unmount
         return () => {
             window.removeEventListener("resize", debouncedResize);
         };
@@ -56,148 +52,116 @@ function Testimonials() {
 
     const [data, setData] = useState(1);
 
-    const dataChange = (value: number) => {
-        setData(value);
+    const slideAnimation = (direction: "left" | "right", nextIndex: number) => {
+        const el = contentRef.current;
+        if (!el) return;
+
+        const distance = direction === "left" ? -100 : 100;
+
+        gsap.fromTo(el,
+            { x: 0, opacity: 1 },
+            {
+                x: distance,
+                opacity: 0,
+                duration: 0.3,
+                onComplete: () => {
+                    setData(nextIndex);
+                    gsap.fromTo(el,
+                        { x: -distance, opacity: 0 },
+                        { x: 0, opacity: 1, duration: 0.3 }
+                    );
+                }
+            }
+        );
     };
 
     return (
-        <section className="w-full  px-1 md:px-3  xl:px-0 mb-17.5 xl:mb-31">
-
-            <div className="w-full  ">
-
+        <section className="w-full px-1 md:px-3 xl:px-0 mb-17.5 xl:mb-31">
+            <div
+            ref={contentRef}
+            className="w-full">
                 {/* Header Section */}
-                <div className="flex flex-col justify-center items-center gap-4 ">
-                    <p className="bottom-animated-img text-[20px] md:text-xl text-[#387975] ">Testimonials</p>
+                <div className="flex flex-col justify-center items-center gap-4">
+                    <p className="bottom-animated-img text-[20px] md:text-xl text-primary">Testimonials</p>
                     <h1 className="bottom-animated-img font-morebold text-[32px] md:text-[36px] lg:text-4xl max-w-md text-center leading-9">
                         See What Our Students Say&apos;s
                     </h1>
                 </div>
 
                 {/* Main Testimonial */}
-                <div className="w-full  flex flex-col sm:flex-row items-center justify-between mt-10 sm:px-3 md:px-0">
+                <div className="w-full flex flex-col sm:flex-row items-center justify-between mt-10 sm:px-3 md:px-0">
 
                     <button
                         onClick={() => {
-                            if (0 < data) {
-                                dataChange(data - 1);
-                            }
-                            else {
-                                dataChange(testmonialsData.length - 1)
-                            }
+                            const nextIndex = data === 0 ? testmonialsData.length - 1 : data - 1;
+                            slideAnimation("left", nextIndex);
                         }}
-                        className="left-animated-img cursor-pointer min-w-12.5 min-h-12.5 hidden  sm:flex items-center  text-white justify-center border bg-[#387975] border-gray-300 rounded-lg text-2xl  transition-colors">
-
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth="4"
-                            stroke="currentColor"
-                            className="size-6">
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                        className="left-animated-img cursor-pointer min-w-12.5 min-h-12.5 hidden sm:flex items-center text-white justify-center border bg-primary border-gray-300 rounded-lg text-2xl transition-colors"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="4" stroke="currentColor" className="size-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                         </svg>
                     </button>
 
-                    <div className="bottom-animated-img text-center flex items-center overflow-y-auto  px-10 font-morebold text-[34px] md:text-[32px] lg:text-3xl text-[#387975] max-w-4xl  leading-9">
+                    <div
+                        ref={contentRef}
+                        className="bottom-animated-img text-center flex items-center overflow-y-auto px-10 font-morebold text-[34px] md:text-[32px] lg:text-3xl text-primary max-w-4xl leading-9"
+                    >
                         {testmonialsData[data].desc}
                     </div>
 
                     <button
                         onClick={() => {
-                            if (testmonialsData.length - 1 > data) {
-                                dataChange(data + 1);
-                            }
-                            else {
-                                dataChange(0)
-                            }
+                            const nextIndex = data === testmonialsData.length - 1 ? 0 : data + 1;
+                            slideAnimation("right", nextIndex);
                         }}
-                        className="right-animated-img cursor-pointer min-w-12.5 min-h-12.5 hidden  sm:flex items-center  text-white justify-center border bg-[#387975] border-gray-300 rounded-lg text-2xl  transition-colors">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth="4"
-                            stroke="currentColor"
-                            className="size-6">
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                        className="right-animated-img cursor-pointer min-w-12.5 min-h-12.5 hidden sm:flex items-center text-white justify-center border bg-primary border-gray-300 rounded-lg text-2xl transition-colors"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="4" stroke="currentColor" className="size-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                         </svg>
                     </button>
 
-                    {/* Navigation Buttons only xs size */}
-                    <div className="flex w-full justify-center mt-9 px-2  sm:hidden">
+                    {/* Navigation Buttons xs size */}
+                    <div className="flex w-full justify-center mt-9 px-2 sm:hidden">
                         <button
                             onClick={() => {
-                                if (0 < data) {
-                                    dataChange(data - 1);
-                                }
-                                else {
-                                    dataChange(testmonialsData.length - 1)
-                                }
+                                const nextIndex = data === 0 ? testmonialsData.length - 1 : data - 1;
+                                slideAnimation("left", nextIndex);
                             }}
-                            className="left-animated-img cursor-pointer min-w-10 max-h-10 flex items-center px- text-white justify-center border bg-[#387975] border-gray-300 rounded-lg text-2xl  transition-colors">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                strokeWidth="4"
-                                stroke="currentColor"
-                                className="size-6"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
-                                />
+                            className="left-animated-img cursor-pointer min-w-10 max-h-10 flex items-center text-white justify-center border bg-primary border-gray-300 rounded-lg text-2xl transition-colors"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="4" stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                             </svg>
                         </button>
 
-                        <div className="bottom-animated-img w-full  flex justify-center ">
-                            <div className="bg-[#387975] h-[2px] w-full mx-3 mt-9.5"></div>
+                        <div className="bottom-animated-img w-full flex justify-center">
+                            <div className="bg-primary h-[2px] w-full mx-3 mt-9.5"></div>
                         </div>
 
                         <button
                             onClick={() => {
-                                if (testmonialsData.length - 1 > data) {
-                                    dataChange(data + 1);
-                                }
-                                else {
-                                    dataChange(0)
-                                }
+                                const nextIndex = data === testmonialsData.length - 1 ? 0 : data + 1;
+                                slideAnimation("right", nextIndex);
                             }}
-                            className="right-animated-img cursor-pointer min-w-10 max-h-10 flex items-center px- text-white justify-center border bg-[#387975] border-gray-300 rounded-lg text-2xl  transition-colors">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                strokeWidth="4"
-                                stroke="currentColor"
-                                className="size-6"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-                                />
+                            className="right-animated-img cursor-pointer min-w-10 max-h-10 flex items-center text-white justify-center border bg-primary border-gray-300 rounded-lg text-2xl transition-colors"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="4" stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                             </svg>
                         </button>
                     </div>
                 </div>
 
-                {/* Testimonial Users xs t0 sm*/}
-                <div className="w-full flex md:hidden flex-col justify-center mt-20 ">
-                    {/* User 1 */}
-                    <div className="w-full  flex justify-center ">
-                        <div className="bottom-animated-img bg-[#387975] h-[2px] w-full mx-20 hidden sm:block "></div>
+                {/* Testimonial Users xs to sm */}
+                <div className="w-full flex md:hidden flex-col justify-center mt-20">
+                    <div className="w-full flex justify-center">
+                        <div className="bottom-animated-img bg-primary h-[2px] w-full mx-20 hidden sm:block"></div>
                     </div>
-                    <div className="bottom-animated-img flex justify-center w-full sm:mt-8 ">
+                    <div className="bottom-animated-img flex justify-center w-full sm:mt-8">
                         <div className="flex items-center gap-4">
-                            <div className="">
+                            <div>
                                 <img
                                     src={testmonialsData[data].img}
                                     alt={testmonialsData[data].name}
@@ -205,34 +169,30 @@ function Testimonials() {
                                 />
                             </div>
                             <div>
-                                <h3 className="font-morebold text-[22px] text-[#387975]">
-                                    {testmonialsData[data].name}
-                                </h3>
+                                <h3 className="font-morebold text-[22px] text-primary">{testmonialsData[data].name}</h3>
                                 <p className="text-gray-600">{testmonialsData[data].role}</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Testimonial Users mt to ...*/}
-                <div className="bottom-animated-img hidden md:grid grid-cols-3 justify-center mt-0 ">
+                {/* Testimonial Users md and above */}
+                <div className="bottom-animated-img hidden md:grid grid-cols-3 justify-center mt-0">
                     <FooterPersonsDetails
                         dataArry={testmonialsData}
-                        useStateData={data == 0 ? testmonialsData.length - 1 : data - 1}
+                        useStateData={data === 0 ? testmonialsData.length - 1 : data - 1}
                         correctPerson={false}
-                    ></FooterPersonsDetails>
-
+                    />
                     <FooterPersonsDetails
                         dataArry={testmonialsData}
                         useStateData={data}
                         correctPerson={true}
-                    ></FooterPersonsDetails>
-
+                    />
                     <FooterPersonsDetails
                         dataArry={testmonialsData}
-                        useStateData={data == testmonialsData.length - 1 ? 0 : data + 1}
+                        useStateData={data === testmonialsData.length - 1 ? 0 : data + 1}
                         correctPerson={false}
-                    ></FooterPersonsDetails>
+                    />
                 </div>
             </div>
         </section>

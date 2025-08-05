@@ -18,7 +18,7 @@ function FooterPersonsDetails({ dataArry = [], useStateData, correctPerson }: Fo
     return (
         <div className='w-full'>
             <div className='w-full flex justify-center mb-8  '>
-                <div className={`${correctPerson == true ? "bg-[#387975] " : "bg-gray-300"} h-[2px] w-full mx-2 mt-9 min-w-50`}></div>
+                <div className={`${correctPerson == true ? "bg-primary " : "bg-gray-300"} h-[2px] w-full mx-2 mt-9 min-w-50`}></div>
             </div>
             {/* User 1 */}
             <div className='flex justify-start w-full mr-12 '>
@@ -32,7 +32,7 @@ function FooterPersonsDetails({ dataArry = [], useStateData, correctPerson }: Fo
                         />
                     </div>
                     <div>
-                        <h3 className="font-morebold text-[22px] text-[#387975]">{dataArry[index].name}</h3>
+                        <h3 className="font-morebold text-[22px] text-primary">{dataArry[index].name}</h3>
                         <p className='text-gray-600'>{dataArry[index].role}</p>
                     </div>
                 </div>

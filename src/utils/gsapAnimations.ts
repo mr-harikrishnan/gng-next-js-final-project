@@ -127,7 +127,7 @@ export const animateZoomIn = (target: string) => {
         scale: 1,
         opacity: 1,
         duration: 1,
-        ease: "back.out(1.7)",
+        ease: "back.out(0.1)",
         scrollTrigger: {
           trigger: element,
           start: "top 90%",

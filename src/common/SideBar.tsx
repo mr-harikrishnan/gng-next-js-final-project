@@ -25,7 +25,7 @@ function Sidebar({
   ]
 
   return (
-    <div className={`${sideBar == false ?"hidden":""} fixed w-72 h-full bg-[#E2EDEC] shadow-lg flex flex-col z-48 lg:hidden`}>
+    <div className={`${sideBar == false ?"hidden":""} fixed w-72 h-full bg-[#FAF5FF] shadow-lg flex flex-col z-48 lg:hidden`}>
       {/* Header */}
       <div className="p-6 border-b border-gray-200 relative">
         <div className="flex flex-col">
@@ -48,7 +48,7 @@ function Sidebar({
           return (
             <button
               key={item.id}
-              className="w-full flex items-center justify-between px-5 py-4 text-left font-medium transition-all duration-200 text-gray-600 hover:bg-gray-50 hover:text-gray-900 focus:bg-green-50 focus:text-[#2b8781] focus:border-r-4 focus:border-[#499288]"
+              className="w-full flex items-center justify-between px-5 py-4 text-left font-medium transition-all duration-200 text-gray-600 hover:bg-gray-50 hover:text-gray-900 focus:bg-purple-100 focus:text-primary focus:border-r-4 focus:border-secondary"
             >
               <span className="text-base">{item.label}</span>
               {item.hasDropdown && (
@@ -63,7 +63,7 @@ function Sidebar({
 
       {/* Login Button */}
       <div className="p-5 border-t border-gray-200">
-        <button className="w-full bg-[#387975] hover:bg-[#7ec9c4] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+        <button className="w-full bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
           Log In
         </button>
       </div>
