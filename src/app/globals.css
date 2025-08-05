@@ -24,11 +24,14 @@
   font-weight: normal;
 }
 
-.font-morebold {
+
+
+/* Add this to create the font-morebold utility class */
+@utility font-morebold {
   font-family: morebold;
 }
 
-.font-primary {
+@utility font-primary {
   font-family: primary;
 }
 

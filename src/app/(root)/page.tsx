@@ -69,7 +69,7 @@ export default function Home() {
 
       <section className="w-full flex justify-center  relative ">
 
-        <div className="absolute top-[-50px] sm:top-[-52px] md:top-[-33px] lg:top-[-20px] xl:top-[78px] xl:m-[-1px] left-0 w-full  h-full z-[-1]">
+        <div className="absolute top-[-70px] sm:top-[-82px] md:top-[-54px] lg:top-[-42px] xl:top-[57px] xl:m-[-1px] left-0 w-full  h-full z-[-1]">
           <DarkBottomCurveOnlySvg></DarkBottomCurveOnlySvg>
         </div>
 

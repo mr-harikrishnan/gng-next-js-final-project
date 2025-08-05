@@ -62,7 +62,7 @@ function LAndGCard({ data }: DataProps) {
         <p className='text-[#535756] text-[16px] text-center mt-4 '>{data.desc}</p>
         <div className='bottom-animated-img w-full flex justify-between text-[16px] text-[#535756]  text-center mt-7 mb-4.5 px-3'>
           <p>Price</p>
-          <p className='font-extrabold text-[#367470]'>$25.00</p>
+          <p className='font-extrabold text-primary'>$25.00</p>
         </div>
       </div>
     </div>
