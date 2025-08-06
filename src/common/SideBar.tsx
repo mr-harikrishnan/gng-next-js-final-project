@@ -1,4 +1,6 @@
 "use client"
+import vathiyarLogo from "@/assets/vathiyar.ai-logo.png"
+
 import React from 'react'
 type SideBarProps = {
   setSideBar: React.Dispatch<React.SetStateAction<boolean>>;
@@ -27,11 +29,11 @@ function Sidebar({
   return (
     <div className={`${sideBar == false ?"hidden":""} fixed w-72 h-full bg-[#FAF5FF] shadow-lg flex flex-col z-48 lg:hidden`}>
       {/* Header */}
-      <div className="p-6 border-b border-gray-200 relative">
-        <div className="flex flex-col">
+      <div className="pt-5 flex items-center  border-b border-gray-200 relative">
+        <div className="flex flex-col justify-start">
           <img
-          className='w-26'
-           src="https://cdn.prod.website-files.com/64184874f371bc785f2236eb/6419a7c46528562f35083c63_Logo%20Language%20School.png" alt="" />
+          className='w-40'
+           src={vathiyarLogo.src} alt="" />
         </div>
         <button className="absolute top-5 right-5 p-1 text-gray-400 hover:text-gray-600 transition-colors">
           <svg
