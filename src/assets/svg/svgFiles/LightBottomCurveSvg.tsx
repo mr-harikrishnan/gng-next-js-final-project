@@ -3,7 +3,7 @@ import React from 'react'
 const LightBottomCurveSvg = () => {
     return (
         < svg
-            className='h-[182rem] sm:h-[121.6rem] md:h-[132rem] lg:h-[74rem] xl:h-[85.5rem] w-full'
+            className='h-[188rem] sm:h-[121.6rem] md:h-[132rem] lg:h-[74rem] xl:h-[85.5rem] w-full'
             viewBox="0 0 1920 1080"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
