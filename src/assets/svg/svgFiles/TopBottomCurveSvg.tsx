@@ -3,7 +3,7 @@ import React from 'react'
 const TopBottomCurveSvg = () => {
     return (
         <svg
-            className="w-full h-[152rem] sm:h-[87.4rem] md:h-[93.5rem] lg:h-[65rem] xl:h-[61rem] "
+            className="w-full h-[182rem] sm:h-[88.4rem] md:h-[98.5rem] lg:h-[65rem] xl:h-[61rem] "
             viewBox="0 0 1920 1080" 
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

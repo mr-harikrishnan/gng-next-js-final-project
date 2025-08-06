@@ -44,19 +44,19 @@ function LearningTracks() {
         {
             label: "AI Basics",
             topic: "AI for Beginners",
-            desc: "Master the basics of AI and ML through interactive videos + quizzes.",
+            desc: "Master the basics of AI and ML through\n interactive videos + quizzes.",
             img: ""
         },
         {
             label: "FullStack Pro",
             topic: "Full Stack Developer",
-            desc: "From HTML to deployment — track your way through live coding tasks.",
+            desc: "From HTML to deployment — track your way\n through live coding tasks.",
             img: ""
         },
         {
             label: "Cyber Safe",
             topic: "Cybersecurity Essentials",
-            desc: "Learn how to stay safe and understand how systems are protected..",
+            desc: "Learn how to stay safe and understand how\n systems are protected..",
             img: ""
         }
     ]
@@ -94,7 +94,7 @@ function LearningTracks() {
             </div>
 
 
-            <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-5 mt-12 lg:mt-16 lg:gap-4 xl:gap-8 xl:mt-15 px-2 xl:px-0">
+            <div className="w-full place-items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-5 mt-12 lg:mt-16 lg:gap-4 xl:gap-8 xl:mt-15 px-2 xl:px-0">
                 {ourCourseData.map((data, index) => (
                     <div key={index} className="flex justify-center    lg:mb-3.5 xl:mb-0">
                         <CourseCard data={data} />

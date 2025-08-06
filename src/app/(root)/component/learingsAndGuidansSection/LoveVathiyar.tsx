@@ -66,7 +66,7 @@ function LoveVathiyar() {
         Vaathiyar makes learning stick. Instead of watching and forgetting, students get mini-quizzes, reminders, and personalized feedback — exactly when they need it. For colleges, Vaathiyar brings visibility into student progress, training impact, and performance metrics across batches.
       </p>
 
-      <div className="bottom-animated-img mt-[29px]">
+      <div className="bottom-animated-img mt-[29px] ">
         <Button text={"About Us"} bgColour={"white"}  />
       </div>
     </div>

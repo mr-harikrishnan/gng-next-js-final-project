@@ -16,6 +16,7 @@ import LightBgSvg from "@/assets/svg/svgFiles/lightBgSvg";
 import TopBottomCurveSvg from "@/assets/svg/svgFiles/TopBottomCurveSvg";
 import DarkBottomCurveOnlySvg from "@/assets/svg/svgFiles/DarkBottomCurveOnlySvg";
 import LightBottomCurveSvg from "@/assets/svg/svgFiles/LightBottomCurveSvg";
+import LearningTracks from "./component/learningTracksSection/LearningTracks";
 
 
 export default function Home() {
@@ -87,7 +88,7 @@ export default function Home() {
           <LightBottomCurveSvg></LightBottomCurveSvg>
         </div>
         <div className="max-w-292.5 pt-38 sm:pt-31 md:pt-46.5 lg:pt-41 xl:pt-65.5">
-          <OurCourses></OurCourses>
+          <LearningTracks></LearningTracks>
         </div>
       </section>
 
