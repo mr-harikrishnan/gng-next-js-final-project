@@ -1,5 +1,4 @@
 "use client"
-import heroSectionBg from "@/assets/homeSection/1_white_and_green_bg.jpg";
 import AnimationBanner from "./component/heroSection/AnimationBanner";
 import InformationContainer from "./component/heroSection/InformationContainer";
 import TeacherHeadline from "./component/learingsAndGuidansSection/LAndGHeadline";
@@ -11,7 +10,6 @@ import Testmonials from "./component/testmonials/Testmonials";
 import Plan from "./component/plan/Plan";
 import Footer from "@/common/Footer";
 import ClassTwinkle from "./component/learingsAndGuidansSection/LoveVathiyar";
-
 import NavBar from "@/common/NavBar";
 import ContactSection from "./component/contactSection/ContactSection";
 import LightBgSvg from "@/assets/svg/svgFiles/lightBgSvg";
@@ -48,7 +46,7 @@ export default function Home() {
       </section>
 
 
-      {/* -----section 2 teachers details-------- */}
+      {/* -----section 2 learing and guidance-------- */}
 
       <section className="w-full flex justify-center relative min-h-[600px]">
         {/* SVG Background - ensure it covers full height */}
@@ -82,7 +80,7 @@ export default function Home() {
 
 
 
-      {/* -----section 4 OurCourses-------- */}
+      {/* -----section 4 Learning tracks-------- */}
 
       <section className=" w-full  flex justify-center  relative ">
         <div className="absolute top-50 left-0 w-full  h-full z-[-1]">
@@ -95,7 +93,7 @@ export default function Home() {
 
 
 
-      {/* -----section 5 VideoCourses-------- */}
+      {/* -----section 5 self-paced or structure-------- */}
 
       <section className=" w-full flex justify-center   relative">
 
@@ -128,7 +126,7 @@ export default function Home() {
 
       </section>
 
-      {/* -----section 8 Find And Start Course-------- */}
+      {/* -----section 8 Find contact section-------- */}
 
       <section className=" w-full  flex justify-center  relative ">
 

@@ -15,15 +15,15 @@ function LAndgcardDetails() {
   const teachersData = [
     {
       title: "AI Mentor",
-      desc: "Monitors your study behavior in real time"
+      desc: "Monitors your study behavior in real time\n"
     },
     {
       title: "Progress Tracker",
-      desc: "Analyzes what you’ve learned and what’s pending"
+      desc: "Analyzes what you’ve learned and what’s pending\n"
     },
     {
       title: "Reminder Engine",
-      desc: "Sends nudges to keep you consistent"
+      desc: "Sends nudges to keep you consistent\n"
     },
     {
       title: "Certification Builder",

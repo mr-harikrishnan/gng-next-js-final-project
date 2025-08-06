@@ -1,4 +1,7 @@
 "use client"
+
+import vathiyarLogo from "@/assets/vathiyar.ai-logo.png"
+
 import React from 'react'
 type SideBarProps = {
   setSideBar: React.Dispatch<React.SetStateAction<boolean>>;
@@ -25,18 +28,22 @@ function Sidebar({
   ]
 
   return (
-    <div className={`${sideBar == false ?"hidden":""} fixed w-72 h-full bg-[#FAF5FF] shadow-lg flex flex-col z-48 lg:hidden`}>
+    <div
+      className={`fixed w-72 h-full bg-[#FAF5FF] shadow-lg flex flex-col z-48 lg:hidden transform transition-transform duration-300 ease-in-out 
+    ${sideBar ? 'translate-x-0' : '-translate-x-full'}`}
+    >
+
       {/* Header */}
-      <div className="p-6 border-b border-gray-200 relative">
-        <div className="flex flex-col">
+      <div className="pt-5 flex items-center  border-b border-gray-200 relative">
+        <div className="flex flex-col justify-start">
           <img
-          className='w-26'
-           src="https://cdn.prod.website-files.com/64184874f371bc785f2236eb/6419a7c46528562f35083c63_Logo%20Language%20School.png" alt="" />
+            className='w-40'
+            src={vathiyarLogo.src} alt="" />
         </div>
         <button className="absolute top-5 right-5 p-1 text-gray-400 hover:text-gray-600 transition-colors">
           <svg
-          onClick={toggleSideBar}
-           className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            onClick={toggleSideBar}
+            className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
@@ -44,7 +51,7 @@ function Sidebar({
 
       {/* Navigation Menu */}
       <nav className="flex-1 py-5">
-        {menuItems.map(function(item) {
+        {menuItems.map(function (item) {
           return (
             <button
               key={item.id}

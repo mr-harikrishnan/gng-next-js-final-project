@@ -15,7 +15,7 @@ function Header({ toggleSideBar }: SideBarToggleProps) {
             <div className=" gap-8 flex w-full justify-between  max-w-292.5  items-center ">
 
                 <div>
-                    <Link href={"/"}> <img src={logo.src} className='w-[60%] cursor-pointer ' alt="" /> </Link>
+                    <Link href={"/"}> <img src={logo.src} className='max-w-[13rem] cursor-pointer ' alt="" /> </Link>
                 </div>
 
                 <div className="hidden lg:flex justify-center     ">
