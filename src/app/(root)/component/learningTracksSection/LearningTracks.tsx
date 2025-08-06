@@ -6,10 +6,10 @@ import {
 import React, { useEffect } from 'react'
 
 import Button from '@/common/Button'
-import CourseCard from '@/common/CourseCard'
+import CourseCard from '@/common/LearningTrackCard'
 
 
-function OurCourses() {
+function LearningTracks() {
 
     const runAnimations = () => {
 
@@ -89,7 +89,7 @@ function OurCourses() {
             <div className='w-full mt-1 flex flex-col items-center sm:px-20 lg:flex-row lg:px-3.5 lg:mt-0 lg:gap-12 xl:px-0 xl:mt-1 xl:gap-58'>
                 <p className='bottom-animated-img text-center text-gray-600  text-[20px] lg:text-left'>This section can showcase popular roadmap titles you&apos;ve created.</p>
                 <div className='bottom-animated-img mt-8 sm:mt-8 md:mt-12 lg:mt-0'>
-                    <Button text={"Veiw More"} bgColour={""} textColour={"#387975"} ></Button>
+                    <Button text={"Veiw More"} bgColour={"primary"}  ></Button>
                 </div>
             </div>
 
@@ -116,4 +116,4 @@ function OurCourses() {
     )
 }
 
-export default OurCourses
+export default LearningTracks

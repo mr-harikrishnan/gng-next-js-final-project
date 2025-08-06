@@ -8,7 +8,7 @@ import React, { useEffect } from 'react'
 import VideoCourseCard from '@/common/VideoCourseCard'
 
 
-function VideoCourses() {
+function SelfPaced() {
 
     const videoCourse=[
         {
@@ -65,4 +65,4 @@ function VideoCourses() {
     )
 }
 
-export default VideoCourses
+export default SelfPaced

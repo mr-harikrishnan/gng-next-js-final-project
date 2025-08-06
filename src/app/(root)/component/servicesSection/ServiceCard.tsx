@@ -8,6 +8,7 @@ import no1Image from "@/assets/services/number1Image.png"
 import no2Image from "@/assets/services/number2Image.png"
 import no3Image from "@/assets/services/number3Image.png"
 import no4Image from "@/assets/services/number4Image.png"
+import NumberIcon from "@/common/icons/NumberIcon"
 
 function ServiceCard() {
 
@@ -74,13 +75,11 @@ function ServiceCard() {
       {
         serviceCardData.map((data, index) =>
 
-          <div key={index} className={`zoom-scale flex  flex-col items-center  h-67 md:h-61 md:items-start lg:h-73 pt-7 lg:pt-7.5 xl:h-66   w-full px-5  border border-white ${index == 0 ? "bg-white " : "bg-[#387975] text-white"}  rounded-lg 
+          <div key={index} className={`zoom-scale flex  flex-col items-center  h-67 md:h-61 md:items-start lg:h-73 pt-7 lg:pt-7.5 xl:h-66   w-full px-5  border border-white ${index == 0 ? "bg-white " : "bg-[#6754A4] text-white"}  rounded-lg 
              ${index == 1 ? "sm:mt-15" : ""} ${index == 2 ? "sm:-mt-12 lg:-mt-15" : ""}
              `}>
             <div className="w-full flex justify-center sm:justify-start">
-              <img
-                className='w-14 '
-                src={data.img.src} alt="" />
+              <NumberIcon index={index+1}></NumberIcon>
             </div>
             <h1 className='font-morebold mt-4  text-[22px] '>{data.headline}</h1>
             <p className={`text-center   ${index == 0 ? "text-gray-500" : "text-white"} mt-4 mb-9 sm:mb-0 sm:text-left`}>{data.desc}</p>

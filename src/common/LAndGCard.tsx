@@ -15,7 +15,7 @@ type DataProps = {
   data: TypeProps;
 };
 
-function TeacherCard({ data }: DataProps) {
+function LAndGCard({ data }: DataProps) {
 
   const runAnimations = () => {
      animateFromBottom(".bottom-animated-img")
@@ -45,10 +45,10 @@ function TeacherCard({ data }: DataProps) {
 
   return (
     <div className='w-full '>
-      <div className=' flex flex-col shadow-sm bg-[#E2EDEC]  rounded-lg items-center  px-2 mx-4 sm:mx-0  py-2'>
+      <div className=' flex flex-col shadow-sm  bg-purple-50  rounded-lg items-center  px-2 mx-4 sm:mx-0  py-2'>
         <div className='w-full flex   items-center justify-center relative'>
           <img
-            className='mt-[23px] border-3 border-white hover:border-[#387975] shadow-lg rounded-full'
+            className='mt-[23px] border-3 border-white hover:border-primary shadow-lg rounded-full'
             src="https://cdn.prod.website-files.com/64184874f371bc66ec2236f9/641ab5d6cec88a5e3da6c523_Teacher%203.png"
             alt=""
           />
@@ -59,10 +59,10 @@ function TeacherCard({ data }: DataProps) {
           />
         </div>
         <h1 className='font-morebold text-[22.1px] mt-4.5'>{data.title}</h1>
-        <p className='text-[#535756] text-[16px] text-center mt-4 '>{data.desc}</p>
+        <p className='text-[#535756] text-[16px] text-center mt-4 '>{data.desc.split('\n').map((line, i) => <span key={i}>{line}<br/></span>)}</p>
         <div className='bottom-animated-img w-full flex justify-between text-[16px] text-[#535756]  text-center mt-7 mb-4.5 px-3'>
           <p>Price</p>
-          <p className='font-extrabold text-[#367470]'>$25.00</p>
+          <p className='font-extrabold text-primary'>$25.00</p>
         </div>
       </div>
     </div>
@@ -70,4 +70,4 @@ function TeacherCard({ data }: DataProps) {
   )
 }
 
-export default TeacherCard
+export default LAndGCard

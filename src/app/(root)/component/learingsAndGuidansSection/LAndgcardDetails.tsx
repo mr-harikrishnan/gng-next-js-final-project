@@ -7,23 +7,23 @@ import {
 import React, { useEffect } from 'react'
 
 
-import TeacherCard from '@/common/TeacherCard'
+import TeacherCard from '@/common/LAndGCard'
 
 
-function TeacherDetails() {
+function LAndgcardDetails() {
 
   const teachersData = [
     {
       title: "AI Mentor",
-      desc: "Monitors your study behavior in real time"
+      desc: "Monitors your study behavior in real time\n"
     },
     {
       title: "Progress Tracker",
-      desc: "Analyzes what you’ve learned and what’s pending"
+      desc: "Analyzes what you’ve learned and what’s pending\n"
     },
     {
       title: "Reminder Engine",
-      desc: "Sends nudges to keep you consistent"
+      desc: "Sends nudges to keep you consistent\n"
     },
     {
       title: "Certification Builder",
@@ -59,7 +59,7 @@ function TeacherDetails() {
 
   return (
     <div className="w-full mt-10 ">
-      <div className="bottom-animated-img w-full grid grid-cols-1 gap-7 items-center sm:grid-cols-2 sm:gap-5 sm:px-4 md:gap-7 md:mt-12.5 lg:grid-cols-4 lg:gap-2 xl:gap-7.5 xl:mx-0 xl:mt-13 xl:px-0">
+      <div className="bottom-animated-img w-full grid grid-cols-1 gap-7 items-center sm:grid-cols-2 sm:gap-5 sm:px-4 md:gap-7 md:mt-12.5 lg:grid-cols-4 lg:gap-2 xl:gap-7.5 xl:mx-0 xl:mt-10 xl:px-0">
 
         {teachersData.map((data, index) => (
           <TeacherCard key={index} data={data}/>
@@ -76,4 +76,4 @@ function TeacherDetails() {
   )
 }
 
-export default TeacherDetails
+export default LAndgcardDetails
